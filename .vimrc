@@ -141,21 +141,23 @@ autocmd BufNewFile,BufRead *.h set textwidth=100
 "autocmd BufNewFile,BufRead *.txt set wrap textwidth=0 wrapmargin=80
 
 
+" shortcuts to type less and overload small fingers less
+map s :A<CR>
 " map <F3> :A<CR>
 imap <F3> <Esc>:A<CR>
 map gn :make<CR>
-map gu p
+" map gu p
 map gj :cn<CR>
 map gk :cprev<CR>
 map gl :clist!<CR>
 map go :tabedit src/
 map gr gT
+map ga :wall<CR>
 
 " enable line numbering
 set number
 set numberwidth=5
 
-map s :A<CR>
 
 
 " http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers

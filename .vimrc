@@ -177,7 +177,7 @@ map gw <C-W>l
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:NERDTreeWinPos = 'right'
 let g:NERDTreeWinSize = 21
-let g:NERDTreeIgnore = ['\.o_p$', '\.o_d$', '\.d$', '\~$']
+let g:NERDTreeIgnore = ['\.o_p$', '\.o_d$', '\.d$', '\.CHECK', '\.swp', '\~$']
 
 " do not show separate status lines for Windows
 set laststatus=0

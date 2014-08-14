@@ -126,7 +126,6 @@ imap <F2> <Esc>Go<CR><C-R>=strftime("%c %Z")<CR><CR>
 
 set ignorecase
 set autowrite
-set makeprg=./compile.sh
 
 " http://www.cs.oberlin.edu/~kuperman/help/vim/indenting.html
 set pastetoggle=<f5>

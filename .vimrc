@@ -128,7 +128,7 @@ set ignorecase
 set autowrite
 
 " http://www.cs.oberlin.edu/~kuperman/help/vim/indenting.html
-set pastetoggle=<f5>
+set pastetoggle=<F5>
 
 " set dictionary=/usr/share/dict/british
 
@@ -161,9 +161,11 @@ set numberwidth=5
 
 
 " http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
-" set hidden
+" do not clear undo history when switching between buffers with :A
+set hidden
 set switchbuf=usetab,newtab
 
+set makeprg=make\ -j2
 
 " _______________ NERDTree support
 map <C-H> <C-W>h

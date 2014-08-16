@@ -159,6 +159,12 @@ set number
 set numberwidth=5
 
 
+" Strip whitespace at the end of line
+" http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
+autocmd BufWritePre *.c :%s/\s\+$//e
+autocmd BufWritePre *.cpp :%s/\s\+$//e
+autocmd BufWritePre *.h :%s/\s\+$//e
+
 
 " http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
 " do not clear undo history when switching between buffers with :A
@@ -166,6 +172,7 @@ set hidden
 set switchbuf=usetab,newtab
 
 set makeprg=make\ -j2
+set clipboard=unnamed
 
 " _______________ NERDTree support
 map <C-H> <C-W>h

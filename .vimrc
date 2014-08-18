@@ -226,3 +226,7 @@ endfunction
 " Highlight currently open buffer in NERDTree
 autocmd BufEnter * call rc:syncTree()
 " ---------------------------- end of NERDTree find
+
+" should come last
+autocmd BufRead COMMIT_EDITMSG goto 1
+autocmd BufRead COMMIT_EDITMSG startinsert

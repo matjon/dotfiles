@@ -199,11 +199,18 @@ set laststatus=0
 " it does not work
 "
 
-set nowrap
+set wrap
 
 " zmniejsza obciążenie małego palca
 map gu :
 " zamiana <Esc> oraz Caps Locka - w ustawieniach klawiatury Gnome
+
+
+" TODO: Ctrl+Shift+Page{Up,Down} - przesuwa obecną kartę
+" użyć: tabpagenr
+" map <C:execute (tabpagenr() +1) . 'tabmove' 
+"  - tego niestety nie da się zrobić, bo terminal nie potrafi wysłać
+"  Ctrl+Shift+PgUp
 
 " ------------------------------NERDTree find
 " from https://gist.github.com/ashwin/3c6a40b2d1245f1c5b96

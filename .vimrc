@@ -212,27 +212,6 @@ map gu :
 "  - tego niestety nie da się zrobić, bo terminal nie potrafi wysłać
 "  Ctrl+Shift+PgUp
 
-" ------------------------------NERDTree find
-" from https://gist.github.com/ashwin/3c6a40b2d1245f1c5b96
-" http://choorucode.com/2014/05/05/how-to-highlight-current-file-in-nerdtree/
-
-" Check if NERDTree is open or active
-function! rc:isNERDTreeOpen()
-return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
- 
-" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
-" file, and we're not in vimdiff
-function! rc:syncTree()
-        if &modifiable && rc:isNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-                NERDTreeFind
-                wincmd p
-        endif
-endfunction
- 
-" Highlight currently open buffer in NERDTree
-autocmd BufEnter * call rc:syncTree()
-" ---------------------------- end of NERDTree find
 
 " should come last
 autocmd BufRead COMMIT_EDITMSG goto 1

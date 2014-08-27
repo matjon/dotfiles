@@ -206,6 +206,17 @@ map gu :
 " zamiana <Esc> oraz Caps Locka - w ustawieniach klawiatury Gnome
 
 
+" http://www.vim.org/scripts/script.php?script_id=4988 - auto lang detection
+set spell spelllang=en_us
+" Polish language spell file generation
+" cd ~/.vim/spell/
+" Open vim
+" :mkspel pl /usr/share/dict/polish
+
+
+" todo: languagetool:
+" let g:languagetool_jar = '/home/mateusz/.vim/languagetool-commandline.jar'
+
 " TODO: Ctrl+Shift+Page{Up,Down} - przesuwa obecną kartę
 " użyć: tabpagenr
 " map <C:execute (tabpagenr() +1) . 'tabmove' 

@@ -216,6 +216,7 @@ set spell spelllang=en_us
 
 " todo: languagetool:
 " let g:languagetool_jar = '/home/mateusz/.vim/languagetool-commandline.jar'
+let g:airline#extensions#tabline#enabled = 1
 
 " TODO: Ctrl+Shift+Page{Up,Down} - przesuwa obecną kartę
 " użyć: tabpagenr
@@ -223,6 +224,8 @@ set spell spelllang=en_us
 "  - tego niestety nie da się zrobić, bo terminal nie potrafi wysłać
 "  Ctrl+Shift+PgUp
 
+" TODO:
+" https://github.com/hkjels/natural.vim/blob/master/plugin/natural.vim
 
 " should come last
 autocmd BufRead COMMIT_EDITMSG goto 1

@@ -1,0 +1,14 @@
+[color]
+	ui = auto
+[user]
+	name = Mateusz Jończyk\n
+	email = mat.jonczyk@o2.pl\n
+[core]
+	editor = vim
+[credential]
+	helper = cache
+[gc]
+	reflogexpire = never
+	reflogexpiasdfre = never
+	pruneexpire = never
+	reflogexpireUnreachable = never

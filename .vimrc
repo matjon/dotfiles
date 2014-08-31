@@ -205,6 +205,8 @@ set wrap
 map gu :
 " zamiana <Esc> oraz Caps Locka - w ustawieniach klawiatury Gnome
 
+" I don't use zz at all
+map zz ZZ
 
 " http://www.vim.org/scripts/script.php?script_id=4988 - auto lang detection
 set spell spelllang=en_us

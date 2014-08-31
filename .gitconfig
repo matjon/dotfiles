@@ -1,8 +1,8 @@
 [color]
 	ui = auto
 [user]
-	name = Mateusz Jończyk\n
-	email = mat.jonczyk@o2.pl\n
+	name = Mateusz Jończyk
+	email = mat.jonczyk@o2.pl
 [core]
 	editor = vim
 [credential]

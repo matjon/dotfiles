@@ -3,6 +3,9 @@
 # for examples
 
 #this file is based on /etc/skel/.bashrc
+#TODO: see /etc/bash*  , /etc/profile
+#TODO: see /usr/share/doc/bash/examples
+
 
 #sometimes when running 
 #sudo -u hidden bash 
@@ -69,12 +72,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
 
 
 
@@ -219,3 +216,13 @@ shopt -s histappend                      # append to history, don't overwrite it
 
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+#______________________________END OF HISTORY CONFIGURATION
+
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi

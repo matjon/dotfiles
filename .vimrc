@@ -199,7 +199,7 @@ set laststatus=0
 " it does not work
 "
 
-set wrap
+set nowrap
 
 " zmniejsza obciążenie małego palca
 map gu :

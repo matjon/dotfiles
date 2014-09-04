@@ -55,21 +55,18 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # ENVIRONMENT VARIABLES {
-        #export PATH=/home/mateusz/bin:$PATH
-        export LARCH_PATH=~/bin/splint-3.1.1/lib
-        export LCLIMPORTDIR=~/bin/splint-3.1.1/imports
+        #export LARCH_PATH=~/bin/splint-3.1.1/lib
+        #export LCLIMPORTDIR=~/bin/splint-3.1.1/imports
+        #export TCL_LIBRARY=/usr/share/tcltk/tcl8.5
 
         #export PATH=$PATH:$HOME/bin/android/platform-tools:$HOME/bin/android/tools:$HOME/bin/android-ndk-r5c
 
         export PATH="/media/Vista/install/octave/prefix/bin:/media/Vista/bin/bin:$HOME/bin:$PATH"
         export LD_LIBRARY_PATH=/media/Vista/install/octave/prefix/lib/octave/3.8.0/:/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:/media/Vista/bin/lib:$LD_LIBRARY_PATH
 
-        export DERBY_INSTALL=/home/mateusz/Studia/IOR/lib/db-derby-10.10.1.1-bin
-        export DERBY_HOME=$DERBY_INSTALL
+        #export DERBY_INSTALL=/home/mateusz/Studia/IOR/lib/db-derby-10.10.1.1-bin
+        #export DERBY_HOME=$DERBY_INSTALL
 
-        export LARCH_PATH=~/bin/splint-3.1.1/lib
-        export LCLIMPORTDIR=~/bin/splint-3.1.1/imports
-        export TCL_LIBRARY=/usr/share/tcltk/tcl8.5
 # }
 
 #______________________________COLOR SUPPORT

@@ -54,26 +54,27 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+# ENVIRONMENT VARIABLES {
+        #export PATH=/home/mateusz/bin:$PATH
+        export LARCH_PATH=~/bin/splint-3.1.1/lib
+        export LCLIMPORTDIR=~/bin/splint-3.1.1/imports
 
+        #export PATH=$PATH:$HOME/bin/android/platform-tools:$HOME/bin/android/tools:$HOME/bin/android-ndk-r5c
 
+        export PATH="/media/Vista/install/octave/prefix/bin:/media/Vista/bin/bin:$HOME/bin:$PATH"
+        export LD_LIBRARY_PATH=/media/Vista/install/octave/prefix/lib/octave/3.8.0/:/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:/media/Vista/bin/lib:$LD_LIBRARY_PATH
 
+        export DERBY_INSTALL=/home/mateusz/Studia/IOR/lib/db-derby-10.10.1.1-bin
+        export DERBY_HOME=$DERBY_INSTALL
 
-#export PATH=/home/mateusz/bin:$PATH
-export LARCH_PATH=~/bin/splint-3.1.1/lib
-export LCLIMPORTDIR=~/bin/splint-3.1.1/imports
-
-#export PATH=$PATH:$HOME/bin/android/platform-tools:$HOME/bin/android/tools:$HOME/bin/android-ndk-r5c
-
-export PATH="/media/Vista/install/octave/prefix/bin:/media/Vista/bin/bin:$HOME/bin:$PATH"
-export LD_LIBRARY_PATH=/media/Vista/install/octave/prefix/lib/octave/3.8.0/:/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:/media/Vista/bin/lib:$LD_LIBRARY_PATH
-
-export DERBY_INSTALL=/home/mateusz/Studia/IOR/lib/db-derby-10.10.1.1-bin
-export DERBY_HOME=$DERBY_INSTALL
-
+        export LARCH_PATH=~/bin/splint-3.1.1/lib
+        export LCLIMPORTDIR=~/bin/splint-3.1.1/imports
+        export TCL_LIBRARY=/usr/share/tcltk/tcl8.5
+# }
 
 #______________________________COLOR SUPPORT
 
-#Z http://fedoraproject.org/wiki/Features/256_Color_Terminals
+#Based on http://fedoraproject.org/wiki/Features/256_Color_Terminals
 
 # Set this variable in your local shell config if you want remote
 # xterms connecting to this system, to be sent 256 colors.
@@ -180,9 +181,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # }
 
-export LARCH_PATH=~/bin/splint-3.1.1/lib
-export LCLIMPORTDIR=~/bin/splint-3.1.1/imports
-export TCL_LIBRARY=/usr/share/tcltk/tcl8.5
 
 
 #______________________________HISTORY CONFIGURATION

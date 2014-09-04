@@ -36,8 +36,6 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
@@ -127,6 +125,8 @@ fi
         #http://www.drbunsen.org/vim-croquet/
         alias vim='vim -w ~/.vimlog "$@"'
 
+        # make less more friendly for non-text input files, see lesspipe(1)
+        [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 # }
 
 # FUNCTIONS {
@@ -171,7 +171,6 @@ fi
 
 
 # HISTORY CONFIGURATION
-
 ##### OLD HISTORY CONFIGURATION 
 # handle history file gracefully for multiple windows open
 #http://en.flossmanuals.net/command-line/ch019_command-history/

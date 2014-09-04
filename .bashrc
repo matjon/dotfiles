@@ -2,13 +2,16 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-if [[ $UID != 1000 ]]; then
+#sometimes when running 
+#sudo -u hidden bash 
+#the variables may not be set correctly, and so this bashrc file will be sourced
+#instead of the proper one in ~hidden
+if [[ $UID == 990 ]]; then
 	export TERM=xterm-256color
 	export HOME=/home/hidden
 	export DISPLAY=:0.0
 	cd $HOME
 	exec bash
-#	exit 0
 fi
 
 #if [[ $(tty | grep /dev/tty) ]]; then

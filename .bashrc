@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+#this file is based on /etc/skel/.bashrc
+
 #sometimes when running 
 #sudo -u hidden bash 
 #the variables may not be set correctly, and so this bashrc file will be sourced
@@ -153,6 +155,35 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+
+# "repeat" command.  Like:
+#
+#	repeat 10 echo foo
+#From /usr/share/doc/bash/examples/startup-files/Bash_aliases
+repeat ()
+{ 
+    local count="$1" i;
+    shift;
+    for i in $(_seq 1 "$count");
+    do
+        eval "$@";
+    done
+}
+
+# Subfunction needed by `repeat'.
+_seq ()
+{ 
+    local lower upper output;
+    lower=$1 upper=$2;
+
+    if [ $lower -ge $upper ]; then return; fi
+    while [ $lower -lt $upper ];
+    do
+	echo -n "$lower "
+        lower=$(($lower + 1))
+    done
+    echo "$lower"
+}
 
 export LARCH_PATH=~/bin/splint-3.1.1/lib
 export LCLIMPORTDIR=~/bin/splint-3.1.1/imports

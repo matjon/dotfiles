@@ -69,63 +69,63 @@ fi
 
 # }
 
-#______________________________COLOR SUPPORT
+# COLOR SUPPORT {
 
-#Based on http://fedoraproject.org/wiki/Features/256_Color_Terminals
+        #Based on http://fedoraproject.org/wiki/Features/256_Color_Terminals
 
-# Set this variable in your local shell config if you want remote
-# xterms connecting to this system, to be sent 256 colors.
-# This can be done in /etc/csh.cshrc, or in an earlier profile.d script.
-#   SEND_256_COLORS_TO_REMOTE=1
-
-
-# Terminals with any of the following set, support 256 colors (and are local)
-local256="$COLORTERM$XTERM_VERSION$ROXTERM_ID$KONSOLE_DBUS_SESSION"
-
-if [ -n "$local256" ] || [ -n "$SEND_256_COLORS_TO_REMOTE" ]; then
-
-   case "$TERM" in
-      'xterm') TERM=xterm-256color;;
-      'screen') TERM=screen-256color;;
-      'Eterm') TERM=Eterm-256color;;
-   esac
-   export TERM
-
-   if [ -n "$TERMCAP" ] && [ "$TERM" = "screen-256color" ]; then
-     TERMCAP=$(echo "$TERMCAP" | sed -e 's/Co#8/Co#256/g')
-     export TERMCAP
-   fi
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-   #color_prompt=yes
-fi
-
-unset local256
+        # Set this variable in your local shell config if you want remote
+        # xterms connecting to this system, to be sent 256 colors.
+        # This can be done in /etc/csh.cshrc, or in an earlier profile.d script.
+        #   SEND_256_COLORS_TO_REMOTE=1
 
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt
+        # Terminals with any of the following set, support 256 colors (and are local)
+        local256="$COLORTERM$XTERM_VERSION$ROXTERM_ID$KONSOLE_DBUS_SESSION"
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+        if [ -n "$local256" ] || [ -n "$SEND_256_COLORS_TO_REMOTE" ]; then
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+           case "$TERM" in
+              'xterm') TERM=xterm-256color;;
+              'screen') TERM=screen-256color;;
+              'Eterm') TERM=Eterm-256color;;
+           esac
+           export TERM
 
-#______________________________END OF COLOR SUPPORT
+           if [ -n "$TERMCAP" ] && [ "$TERM" = "screen-256color" ]; then
+             TERMCAP=$(echo "$TERMCAP" | sed -e 's/Co#8/Co#256/g')
+             export TERMCAP
+           fi
+        # uncomment for a colored prompt, if the terminal has the capability; turned
+        # off by default to not distract the user: the focus in a terminal window
+        # should be on the output of commands, not on the prompt
+           #color_prompt=yes
+        fi
 
-#______________________________ ALIASES {
+        unset local256
+
+
+        if [ "$color_prompt" = yes ]; then
+            PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+        else
+            PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+        fi
+        unset color_prompt
+
+        # enable color support of ls and also add handy aliases
+        if [ -x /usr/bin/dircolors ]; then
+            test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+            alias ls='ls --color=auto'
+            #alias dir='dir --color=auto'
+            #alias vdir='vdir --color=auto'
+
+            alias grep='grep --color=auto'
+            alias fgrep='fgrep --color=auto'
+            alias egrep='egrep --color=auto'
+        fi
+
+# } //END OF COLOR SUPPORT
+
+# ALIASES {
 
         # some more ls aliases
         alias ll='ls -alF'
@@ -139,48 +139,48 @@ fi
 
 # }
 
-#______________________________ FUNCTIONS {
+# FUNCTIONS {
 
-# "repeat" command.  Like:
-#
-#	repeat 10 echo foo
-#From /usr/share/doc/bash/examples/startup-files/Bash_aliases
-repeat ()
-{ 
-    local count="$1" i;
-    shift;
-    for i in $(_seq 1 "$count");
-    do
-        eval "$@";
-    done
-}
+        # "repeat" command.  Like:
+        #
+        #	repeat 10 echo foo
+        #From /usr/share/doc/bash/examples/startup-files/Bash_aliases
+        repeat ()
+        { 
+            local count="$1" i;
+            shift;
+            for i in $(_seq 1 "$count");
+            do
+                eval "$@";
+            done
+        }
 
-# Subfunction needed by `repeat'.
-_seq ()
-{ 
-    local lower upper output;
-    lower=$1 upper=$2;
+        # Subfunction needed by `repeat'.
+        _seq ()
+        { 
+            local lower upper output;
+            lower=$1 upper=$2;
 
-    if [ $lower -ge $upper ]; then return; fi
-    while [ $lower -lt $upper ];
-    do
-	echo -n "$lower "
-        lower=$(($lower + 1))
-    done
-    echo "$lower"
-}
+            if [ $lower -ge $upper ]; then return; fi
+            while [ $lower -lt $upper ];
+            do
+                echo -n "$lower "
+                lower=$(($lower + 1))
+            done
+            echo "$lower"
+        }
 
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+        # Add an "alert" alias for long running commands.  Use like so:
+        #   sleep 10; alert
+        alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 
 # }
 
 
 
-#______________________________HISTORY CONFIGURATION
+# HISTORY CONFIGURATION
 
 ##### OLD HISTORY CONFIGURATION 
 # handle history file gracefully for multiple windows open

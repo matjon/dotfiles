@@ -54,23 +54,6 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 
 
@@ -144,6 +127,22 @@ fi
 
 #______________________________END OF COLOR SUPPORT
 
+#______________________________ ALIASES {
+
+        # some more ls aliases
+        alias ll='ls -alF'
+        alias la='ls -A'
+        alias l='ls -CF'
+        alias ZZ=exit
+        alias zz=exit
+
+        #http://www.drbunsen.org/vim-croquet/
+        alias vim='vim -w ~/.vimlog "$@"'
+
+# }
+
+#______________________________ FUNCTIONS {
+
 # "repeat" command.  Like:
 #
 #	repeat 10 echo foo
@@ -173,19 +172,17 @@ _seq ()
     echo "$lower"
 }
 
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
+# }
+
 export LARCH_PATH=~/bin/splint-3.1.1/lib
 export LCLIMPORTDIR=~/bin/splint-3.1.1/imports
 export TCL_LIBRARY=/usr/share/tcltk/tcl8.5
-
-
-alias ZZ=exit
-
-#dodałem pon, 1 wrz 2014, 10:17:20 CEST
-alias zz=exit
-
-#http://www.drbunsen.org/vim-croquet/
-alias vim='vim -w ~/.vimlog "$@"'
-
 
 
 #______________________________HISTORY CONFIGURATION
@@ -223,6 +220,7 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
+#Disabling this makes execution of .bashrc blazing fast.
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi

@@ -208,6 +208,9 @@ map gu :
 " I don't use zz at all
 map zz ZZ
 
+" map vim behaviour consistent
+map Y y$
+
 " http://www.vim.org/scripts/script.php?script_id=4988 - auto lang detection
 set spell spelllang=en_us
 " Polish language spell file generation

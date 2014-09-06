@@ -5,6 +5,9 @@
 #this file is based on /etc/skel/.bashrc
 #TODO: see /etc/bash*  , /etc/profile
 #TODO: see /usr/share/doc/bash/examples
+#TODO: read other shopt options to see if they make sense
+#TODO: http://www.thegeekstuff.com/tag/productivity-tips-for-geeks/
+#TODO: http://www.thegeekstuff.com/2008/10/6-awesome-linux-cd-command-hacks-productivity-tip3-for-geeks/#more-233
 
 
 #sometimes when running 
@@ -41,6 +44,9 @@ shopt -s checkwinsize
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
+
+#it is safe because it is only used in interactive mode
+shopt -s cdspell
 
 # ENVIRONMENT VARIABLES {
         #export LARCH_PATH=~/bin/splint-3.1.1/lib

@@ -212,11 +212,11 @@ map zz ZZ
 map Y y$
 
 " http://www.vim.org/scripts/script.php?script_id=4988 - auto lang detection
-set spell spelllang=en_us
-" Polish language spell file generation
-" cd ~/.vim/spell/
-" Open vim
-" :mkspel pl /usr/share/dict/polish
+set spell spelllang=en_us,pl
+" How to generate polish language spell file:
+"        cd ~/.vim/spell/
+"        Open vim
+"        :mkspel pl /usr/share/dict/polish
 
 
 " todo: languagetool:

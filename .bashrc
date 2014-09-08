@@ -45,15 +45,6 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
 
 
 #it is safe because it is only used in interactive mode
@@ -129,6 +120,17 @@ shopt -s cdspell
         fi
 
 # } //END OF COLOR SUPPORT
+
+# TERMINAL TITLE {
+        # If this is an xterm set the title to user@host:dir
+        case "$TERM" in
+        xterm*|rxvt*)
+            PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+            ;;
+        *)
+            ;;
+        esac
+# }
 
 # ALIASES {
 

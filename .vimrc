@@ -185,7 +185,10 @@ endif
 " Text editing --------------------------------------------------------- {{{
   set spell                           " Use spell-checker
   set encoding=utf-8                  " Default encoding
-  set synmaxcol=500                   " Disable highlighting for lines longer than 500 chars
+" set synmaxcol=500                   " Disable highlighting for lines longer than 500 chars
+        " it is annoying, when I have a very long string in C, 
+        " it does not recognize the closing aposrophe: "
+        " and colors all text as red
 " }}}
 
 " Indentation ---------------------------------------------------------- {{{

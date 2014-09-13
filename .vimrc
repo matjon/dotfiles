@@ -237,6 +237,7 @@ set spell spelllang=en_us,pl
         let g:NERDTreeWinPos = 'right'
         let g:NERDTreeWinSize = 21
         let g:NERDTreeIgnore = ['\.o$', '\.swp', '\~$']
+        let g:NERDTreeShowHidden=1
 
         " do not show separate status lines for windows
         set laststatus=0

@@ -150,12 +150,16 @@ set ignorecase
 " }
 
 
-
 " Strip whitespace at the end of line
 " http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
-autocmd BufWritePre *.c :%s/\s\+$//e
-autocmd BufWritePre *.cpp :%s/\s\+$//e
-autocmd BufWritePre *.h :%s/\s\+$//e
+
+if !exists(":Stripws")
+  command Stripws :%s/\m\s\+$//e
+endif
+
+autocmd BufWritePre *.c :Stripws
+autocmd BufWritePre *.cpp :Stripws
+autocmd BufWritePre *.h :Stripws
 
 
 " http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
@@ -277,6 +281,7 @@ set spell spelllang=en_us,pl
 "         Ctrl+Shift+PgUp
 
 "       - https://github.com/hkjels/natural.vim/blob/master/plugin/natural.vim
+"               - sprawdzić też git log -p
 
 "       - OmniCppCOmplete
 "               set tags+=/home/mateusz/.vim/tags_global

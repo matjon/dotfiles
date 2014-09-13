@@ -124,7 +124,7 @@ endif
 " set mouse=a                         " Enable mouse-input
 " set autowriteall                    " Save when shifting focus
 " set autoread                        " Reload files changed outside of vim
-  set visualbell                      " No bells!
+" set visualbell                      " No bells!
   set noerrorbells                    " No whistles!
   set ffs=unix,dos,mac                " Default file types
   set backspace=indent,eol,start      " Make backspace behave normally.
@@ -419,6 +419,10 @@ set spell spelllang=en_us,pl
 "               detection
 "               - we don't need it as we currently use
 "                 set spelllang=pl,en
+"
+"       - vim-autocorrect
+"               automatyczne podstawianie słów w angielskim,
+"               https://github.com/panozzaj/vim-autocorrect/tree/master
 
 " should come last
 autocmd BufRead COMMIT_EDITMSG goto 1

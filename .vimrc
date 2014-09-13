@@ -113,24 +113,17 @@ set expandtab
 set gdefault
 
 " F2 - wstawia datę na końcu pliku i otwiera poniżej do edycji
-
 " map <F2> Go<Esc>:r!date<CR>Go
-" (wzorowane na przykładie w map.txt)
 " tak jest szybciej
+" (wzorowane na przykładie w map.txt)
 map <F2> Go<CR><C-R>=strftime("%c %Z")<CR><CR>
 imap <F2> <Esc>Go<CR><C-R>=strftime("%c %Z")<CR><CR>
-" map <F8> <Esc>:make<CR>
-" map <F9> <Esc>:clist!<CR>
-" map <F10> <Esc>:cn<CR>
-" map <F11> <Esc>:cp<CR>
 
 set ignorecase
 set autowrite
 
 " http://www.cs.oberlin.edu/~kuperman/help/vim/indenting.html
 set pastetoggle=<F5>
-
-" set dictionary=/usr/share/dict/british
 
 " set clang_library_path /usr/lib/i386-linux-gnu/libclang-3.4.so.1
 "
@@ -143,8 +136,7 @@ autocmd BufNewFile,BufRead *.h set textwidth=100
 
 " shortcuts to type less and overload small fingers less
 map s :A<CR>
-" map <F3> :A<CR>
-imap <F3> <Esc>:A<CR>
+" imap <F3> <Esc>:A<CR>
 map gn :make<CR>
 " map gu p
 map gj :cn<CR>
@@ -188,7 +180,7 @@ let g:NERDTreeWinPos = 'right'
 let g:NERDTreeWinSize = 21
 let g:NERDTreeIgnore = ['\.o_p$', '\.o_d$', '\.d$', '\.CHECK', '\.swp', '\~$']
 
-" do not show separate status lines for Windows
+" do not show separate status lines for windows
 set laststatus=0
 " let  NERDTreeMapOpenInTab = '<CR>'
 " ______________ end of NERDTree support

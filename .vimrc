@@ -38,17 +38,8 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-set backup		" keep a backup file
-set history=500		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -57,16 +48,10 @@ map Q gq
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
-" In many terminal emulators the mouse works just fine, thus enable it.
-"if has('mouse')
-"  set mouse=a
-"endif
-
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   syntax on
-  set hlsearch
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -123,6 +108,13 @@ set showmatch
 " imported from natural.vim -----------------------------------------------{
 " diff -U3 works correctly
 
+if has('autocmd')
+  filetype plugin indent on
+endif
+if has('syntax') && !exists('g:syntax_on')
+  syntax enable
+endif
+
 " I/O ------------------------------------------------------------------ {{{
   set ttyfast                         " Faster repeated editing
                         " it's on by default
@@ -139,6 +131,7 @@ set showmatch
 " set modelines=0                     " Prevents modeline exploits
   set nostartofline                   " Keep cursor-position when switching buffers
   set backup                          " Turn on backup
+                               " NOTE: this is not enabled automatically
 " set backupdir=~/.vim/backup         " Where to store backup files
 " set directory=~/.vim/swap           " Where to store swap files
 " }}}
@@ -162,7 +155,8 @@ set showmatch
 " }}}
 
 " History -------------------------------------------------------------- {{{
-  set history=32768                   " A longer history
+" set history=32768                   " A longer history
+  set history=100000                  " A longer history
   set undolevels=1000                 " Changing history is useful to
 " }}}
 

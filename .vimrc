@@ -126,25 +126,29 @@ set fileencodings=ucs-bom,utf-8,cp1250
         " otherwise check if the file is valid UTF-8, if not, try to open 
         " in cp1250 as a last resort
 
-set expandtab
-"set cinoptions+={2
 
 set gdefault            " automatically set the g flag in :substitute
 set ignorecase
 
 
+" HANDLING OF STRUCTURED FILES ------------------------------------------{
 
+        set expandtab
+        "set cinoptions+={2
 
-autocmd BufNewFile,BufRead *.cpp set textwidth=100
-autocmd BufNewFile,BufRead *.h set textwidth=100
+        autocmd BufNewFile,BufRead *.cpp set textwidth=100
+        autocmd BufNewFile,BufRead *.h set textwidth=100
 
-"autocmd BufNewFile,BufRead *.txt set wrap textwidth=0 wrapmargin=80
+        "autocmd BufNewFile,BufRead *.txt set wrap textwidth=0 wrapmargin=80
 
+        set nowrap
 
+        " enable line numbering
+        set number
+        set numberwidth=5
 
-" enable line numbering
-set number
-set numberwidth=5
+" }
+
 
 
 " Strip whitespace at the end of line
@@ -165,7 +169,6 @@ set clipboard=unnamed
 
 
 
-set nowrap
 
 set spell spelllang=en_us,pl
 " How to generate polish language spell file:

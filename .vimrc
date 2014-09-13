@@ -336,6 +336,28 @@ set spell spelllang=en_us,pl
 
 
 
+
+
+
+
+
+" ----------------------------------------------------------------------------
+" PLUGIN SUPPORT
+" ----------------------------------------------------------------------------
+"
+" Plugins I use:
+" autocomplpop          - automatic word completion
+" a.vim                 - automatic switching between *.c <-> *.h
+" nerdtree              - a file browser on the right
+" vim-nerdtree-tabs     - make the file browser work correctly with multiple tabs
+" vim-airline           - used only for the tab line
+"
+" Plugins worth considering:
+" conqueterm_2.2.vmb  natural.vim  OmniCppComplete  vim-fugitive  vim-signify
+" LanguageTool
+" tabline.vim
+"
+
 " NERDTree support ----------------------------------------------------{
 
         map <C-H> <C-W>h

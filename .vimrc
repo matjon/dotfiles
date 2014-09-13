@@ -180,10 +180,13 @@ set spell spelllang=en_us,pl
         " http://www.cs.oberlin.edu/~kuperman/help/vim/indenting.html
         set pastetoggle=<F5>
 
-        " F2 - wstawia datę na końcu pliku i otwiera poniżej do edycji
-        " (wzorowane na przykładie w map.txt)
-        map <F2> Go<CR><C-R>=strftime("%c %Z")<CR><CR>
+        " F2 - inserts a date at the end of a file and starts insert mode
+        "      below it. Great for keeping NOTES.
+        "      (based on an example in map.txt in vim documentation)
+        map  <F2>      Go<CR><C-R>=strftime("%c %Z")<CR><CR>
         imap <F2> <Esc>Go<CR><C-R>=strftime("%c %Z")<CR><CR>
+        map  <F3>      o<CR>EDIT: <C-R>=strftime("%c %Z")<CR><CR>
+        imap <F3> <Esc>o<CR>EDIT: <C-R>=strftime("%c %Z")<CR><CR>
 
         " shortcuts to type less and overload small fingers less
         map s :A<CR>

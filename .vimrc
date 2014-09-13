@@ -123,7 +123,7 @@ execute pathogen#infect()
 
 set fileencodings=ucs-bom,utf-8,cp1250
         " if there is a BOM, use it,
-        " otherwise check if the file is valid UTF-8, if not, try to open 
+        " otherwise check if the file is valid UTF-8, if not, try to open
         " in cp1250 as a last resort
 
 
@@ -272,10 +272,10 @@ set spell spelllang=en_us,pl
 
 " }
 
-" TODO:         
+" TODO:
 "       - moving current tab with Ctrl+Shift+Page{Up,Down}
 "         we could use tabpagenr:
-"                map <C:execute (tabpagenr() +1) . 'tabmove' 
+"                map <C:execute (tabpagenr() +1) . 'tabmove'
 "
 "         Unfortunately this won't work because the terminal cannot send
 "         Ctrl+Shift+PgUp
@@ -296,7 +296,7 @@ set spell spelllang=en_us,pl
 "
 "       - http://www.vim.org/scripts/script.php?script_id=4988 - automatic language
 "               detection
-"               - we don't need it as we currently use 
+"               - we don't need it as we currently use
 "                 set spelllang=pl,en
 
 " should come last

@@ -112,18 +112,9 @@ set expandtab
 "set cinoptions+={2
 set gdefault
 
-" F2 - wstawia datę na końcu pliku i otwiera poniżej do edycji
-" map <F2> Go<Esc>:r!date<CR>Go
-" tak jest szybciej
-" (wzorowane na przykładie w map.txt)
-map <F2> Go<CR><C-R>=strftime("%c %Z")<CR><CR>
-imap <F2> <Esc>Go<CR><C-R>=strftime("%c %Z")<CR><CR>
-
 set ignorecase
 set autowrite
 
-" http://www.cs.oberlin.edu/~kuperman/help/vim/indenting.html
-set pastetoggle=<F5>
 
 " set clang_library_path /usr/lib/i386-linux-gnu/libclang-3.4.so.1
 "
@@ -134,17 +125,54 @@ autocmd BufNewFile,BufRead *.h set textwidth=100
 "autocmd BufNewFile,BufRead *.txt set wrap textwidth=0 wrapmargin=80
 
 
-" shortcuts to type less and overload small fingers less
-map s :A<CR>
-" imap <F3> <Esc>:A<CR>
-map gn :make<CR>
-" map gu p
-map gj :cn<CR>
-map gk :cprev<CR>
-map gl :clist!<CR>
-map go :tabedit src/
-map gr gT
-map ga :wall<CR>
+
+
+
+
+
+
+
+
+" keyboard shortcuts    {
+
+        " http://www.cs.oberlin.edu/~kuperman/help/vim/indenting.html
+        set pastetoggle=<F5>
+
+        " F2 - wstawia datę na końcu pliku i otwiera poniżej do edycji
+        " (wzorowane na przykładie w map.txt)
+        map <F2> Go<CR><C-R>=strftime("%c %Z")<CR><CR>
+        imap <F2> <Esc>Go<CR><C-R>=strftime("%c %Z")<CR><CR>
+
+        " shortcuts to type less and overload small fingers less
+        map s :A<CR>
+        " imap <F3> <Esc>:A<CR>
+        map gn :make<CR>
+        " map gu p
+        map gj :cn<CR>
+        map gk :cprev<CR>
+        map gl :clist!<CR>
+        map go :tabedit src/
+        map gr gT
+        map ga :wall<CR>
+
+        " zamiana <Esc> oraz Caps Locka - w ustawieniach klawiatury Gnome
+        " I don't use zz at all
+        map zz ZZ
+
+        " map vim behaviour consistent
+        map Y y$
+
+        " zmniejsza obciążenie małego palca
+        map gu :
+
+
+" }
+
+
+
+
+
+
 
 " enable line numbering
 set number
@@ -192,16 +220,6 @@ set laststatus=0
 "
 
 set nowrap
-
-" zmniejsza obciążenie małego palca
-map gu :
-" zamiana <Esc> oraz Caps Locka - w ustawieniach klawiatury Gnome
-
-" I don't use zz at all
-map zz ZZ
-
-" map vim behaviour consistent
-map Y y$
 
 " http://www.vim.org/scripts/script.php?script_id=4988 - auto lang detection
 set spell spelllang=en_us,pl

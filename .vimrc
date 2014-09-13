@@ -246,8 +246,7 @@ set fileencodings=ucs-bom,utf-8,cp1250
 
         set nowrap
 
-        " enable line numbering
-        set number
+        " line numbering
         set numberwidth=5
 
 " }
@@ -276,7 +275,7 @@ set clipboard=unnamed
 
 
 
-set spell spelllang=en_us,pl
+set spelllang=en_us,pl
 " How to generate polish language spell file:
 "        cd ~/.vim/spell/
 "        Open vim

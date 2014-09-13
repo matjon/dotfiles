@@ -212,24 +212,27 @@ set switchbuf=usetab,newtab
 set makeprg=make\ -j2
 set clipboard=unnamed
 
-" _______________ NERDTree support
-map <C-H> <C-W>h
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
-" go to the NERDTree window
-map gw <C-W>l
+" NERDTree support ----------------------------------------------------{
 
-" map <F3> :NERDTree<CR> <C-W>L 20<C-W><
-let g:nerdtree_tabs_open_on_console_startup = 1
-let g:NERDTreeWinPos = 'right'
-let g:NERDTreeWinSize = 21
-let g:NERDTreeIgnore = ['\.o$', '\.swp', '\~$']
+        map <C-H> <C-W>h
+        map <C-J> <C-W>j
+        map <C-K> <C-W>k
+        map <C-L> <C-W>l
 
-" do not show separate status lines for windows
-set laststatus=0
-" let  NERDTreeMapOpenInTab = '<CR>'
-" ______________ end of NERDTree support
+        " go to the NERDTree window
+        map gw <C-W>l
+
+        " map <F3> :NERDTree<CR> <C-W>L 20<C-W><
+        let g:nerdtree_tabs_open_on_console_startup = 1
+        let g:NERDTreeWinPos = 'right'
+        let g:NERDTreeWinSize = 21
+        let g:NERDTreeIgnore = ['\.o$', '\.swp', '\~$']
+
+        " do not show separate status lines for windows
+        set laststatus=0
+        " let  NERDTreeMapOpenInTab = '<CR>'
+
+" }
 
 
 
@@ -243,7 +246,7 @@ set spell spelllang=en_us,pl
 
 
 
-" VIM-AIRLINE CONFIG--------------------------------------------------------{
+" VIM-AIRLINE CONFIG --------------------------------------------------------{
 
         " based on some sample config from vim-airline
         let g:airline#extensions#tabline#enabled = 1

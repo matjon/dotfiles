@@ -123,11 +123,28 @@ set showmatch
 
 " TODO: integrate with rest of the file
 " imported from natural.vim -----------------------------------------------{
-"       ttyfast - on by default
-        set ttimeoutlen=10 
-        set mouse=""
-        set noautowriteall
-        set nostartofline
+" diff -U3 works correctly
+
+" I/O ------------------------------------------------------------------ {{{
+  set ttyfast                         " Faster repeated editing
+                        " it's on by default
+  set ttimeout                        " Use timeout for key sequence
+" set ttimeoutlen=50                  " Time you have to complete a key sequence
+  set ttimeoutlen=10                  " Time you have to complete a key sequence
+" set mouse=a                         " Enable mouse-input
+" set autowriteall                    " Save when shifting focus
+" set autoread                        " Reload files changed outside of vim
+  set visualbell                      " No bells!
+  set noerrorbells                    " No whistles!
+  set ffs=unix,dos,mac                " Default file types
+  set backspace=indent,eol,start      " Make backspace behave normally.
+" set modelines=0                     " Prevents modeline exploits
+  set nostartofline                   " Keep cursor-position when switching buffers
+  set backup                          " Turn on backup
+" set backupdir=~/.vim/backup         " Where to store backup files
+" set directory=~/.vim/swap           " Where to store swap files
+" }}}
+
 
 " Wild menu ------------------------------------------------------------ {{{
   if has("wildmenu")

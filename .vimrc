@@ -117,9 +117,7 @@ set showmatch
 "--------------------------
 "MY MODIFICATIONS
 "--------------------------
-" set mouse=a
 
-" source ~/.vim/bundle_remv/natural.vim/plugin/natural.vim
 
 " TODO: integrate with rest of the file
 " imported from natural.vim -----------------------------------------------{
@@ -241,9 +239,6 @@ set fileencodings=ucs-bom,utf-8,cp1250
         " in cp1250 as a last resorts
 
 
-set gdefault            " automatically set the g flag in :substitute
-set ignorecase
-
 
 " HANDLING OF STRUCTURED FILES ------------------------------------------{
 
@@ -266,7 +261,6 @@ set ignorecase
 
 " Strip whitespace at the end of line
 " http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
-
 if !exists(":Stripws")
   command Stripws :%s/\m\s\+$//e
 endif
@@ -325,12 +319,8 @@ set spell spelllang=en_us,pl
         " I don't use zz at all
         map zz ZZ
 
-        " map vim behaviour consistent
-        map Y y$
-
         " zmniejsza obciążenie małego palca
         map gu :
-
 
 " }
 

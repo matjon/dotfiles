@@ -136,8 +136,6 @@ set ignorecase
 set autowrite
 
 
-" set clang_library_path /usr/lib/i386-linux-gnu/libclang-3.4.so.1
-"
 
 autocmd BufNewFile,BufRead *.cpp set textwidth=100
 autocmd BufNewFile,BufRead *.h set textwidth=100
@@ -234,14 +232,9 @@ set laststatus=0
 " ______________ end of NERDTree support
 
 
-"________________ OmniCppCOmplete
-" set tags+=/home/mateusz/.vim/tags_global
-" it does not work
-"
 
 set nowrap
 
-" http://www.vim.org/scripts/script.php?script_id=4988 - auto lang detection
 set spell spelllang=en_us,pl
 " How to generate polish language spell file:
 "        cd ~/.vim/spell/
@@ -249,8 +242,6 @@ set spell spelllang=en_us,pl
 "        :mkspel pl /usr/share/dict/polish
 
 
-" todo: languagetool:
-" let g:languagetool_jar = '/home/mateusz/.vim/languagetool-commandline.jar'
 
 " VIM-AIRLINE CONFIG--------------------------------------------------------{
 
@@ -276,14 +267,31 @@ set spell spelllang=en_us,pl
 
 " }
 
-" TODO: Ctrl+Shift+Page{Up,Down} - przesuwa obecną kartę
-" użyć: tabpagenr
-" map <C:execute (tabpagenr() +1) . 'tabmove' 
-"  - tego niestety nie da się zrobić, bo terminal nie potrafi wysłać
-"  Ctrl+Shift+PgUp
+" TODO:         
+"       - moving current tab with Ctrl+Shift+Page{Up,Down}
+"         we could use tabpagenr:
+"                map <C:execute (tabpagenr() +1) . 'tabmove' 
+"
+"         Unfortunately this won't work because the terminal cannot send
+"         Ctrl+Shift+PgUp
 
-" TODO:
-" https://github.com/hkjels/natural.vim/blob/master/plugin/natural.vim
+"       - https://github.com/hkjels/natural.vim/blob/master/plugin/natural.vim
+
+"       - OmniCppCOmplete
+"               set tags+=/home/mateusz/.vim/tags_global
+"               it does not work
+"       - completion with clang:
+"               set clang_library_path /usr/lib/i386-linux-gnu/libclang-3.4.so.1
+"               - also doesn't work
+"
+"       - languagetool (grammar checking)
+"         let g:languagetool_jar = '/home/mateusz/.vim/languagetool-commandline.jar'
+"               - does not work
+"
+"       - http://www.vim.org/scripts/script.php?script_id=4988 - automatic language
+"               detection
+"               - we don't need it as we currently use 
+"                 set spelllang=pl,en
 
 " should come last
 autocmd BufRead COMMIT_EDITMSG goto 1

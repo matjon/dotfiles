@@ -121,6 +121,7 @@ set showmatch
 
 " source ~/.vim/bundle_remv/natural.vim/plugin/natural.vim
 
+" TODO: integrate with rest of the file
 " imported from natural.vim -----------------------------------------------{
 "       ttyfast - on by default
         set ttimeoutlen=10 
@@ -128,6 +129,7 @@ set showmatch
         set noautowriteall
         set nostartofline
 
+" Wild menu ------------------------------------------------------------ {{{
   if has("wildmenu")
     set wildmenu                             " Completions in a menu
     set wildmode=list:longest,full           " Fine grained completion
@@ -138,11 +140,16 @@ set showmatch
       set wildignorecase
     endif
   endif
+" }}}
 
-        " History -------------------------------------------------------------- {{{
-          set history=32768                   " A longer history
-          set undolevels=1000                 " Changing history is useful to
-        " }}}
+" Scratch -------------------------------------------------------------- {{{
+  set hidden                          " Allow un-saved buffers in background
+" }}}
+
+" History -------------------------------------------------------------- {{{
+  set history=32768                   " A longer history
+  set undolevels=1000                 " Changing history is useful to
+" }}}
 
 " Aesthetics ----------------------------------------------------------- {{{
 "  set list listchars=tab:→\ ,trail:·  " Show 'invisible characters'
@@ -151,10 +158,19 @@ set showmatch
   set nowrap                          " Don't wrap lines
   set guicursor+=a:blinkon0           " Disable the blinking cursor
   set showmatch                       " Show matching parenthesis
+" set scrolloff=10                    " Keep the cursor close to center
   set scrolloff=5                    " Keep the cursor close to center
-"  set sidescrolloff=3                " and middle
+" set sidescrolloff=3                " and middle
   set splitbelow                      " New window will appear below the current window
   set splitright                      " New window will appear to the right of the current window
+" }}}
+
+" Search --------------------------------------------------------------- {{{
+  set gdefault                        " Search with global by default
+  set hlsearch                        " Highlight terms
+  set ignorecase                      " Ignore case by default
+" set smartcase                       " Do not ignore case if pattern has uppercase letters
+  set incsearch                       " Show search matches as you type
 " }}}
 
 " Text editing --------------------------------------------------------- {{{
@@ -206,7 +222,6 @@ set fileencodings=ucs-bom,utf-8,cp1250
         " if there is a BOM, use it,
         " otherwise check if the file is valid UTF-8, if not, try to open
         " in cp1250 as a last resorts
-set encoding=utf-8
 
 
 set gdefault            " automatically set the g flag in :substitute

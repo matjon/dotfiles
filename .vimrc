@@ -119,12 +119,94 @@ set showmatch
 "--------------------------
 " set mouse=a
 
+" source ~/.vim/bundle_remv/natural.vim/plugin/natural.vim
+
+" imported from natural.vim -----------------------------------------------{
+"       ttyfast - on by default
+        set ttimeoutlen=100 
+        set mouse=""
+        set noautowriteall
+        set nostartofline
+
+  if has("wildmenu")
+    set wildmenu                             " Completions in a menu
+    set wildmode=list:longest,full           " Fine grained completion
+    set wildignore+=_darcs,.hg,.git,.svn     " Ignore vc directories
+
+    " Case-insensitive completion
+    if exists("&wildignorecase")
+      set wildignorecase
+    endif
+  endif
+
+        " History -------------------------------------------------------------- {{{
+          set history=32768                   " A longer history
+          set undolevels=1000                 " Changing history is useful to
+        " }}}
+
+" Aesthetics ----------------------------------------------------------- {{{
+"  set list listchars=tab:→\ ,trail:·  " Show 'invisible characters'
+  set colorcolumn=80                  " Practice short code
+  set number                          " Show line-numbers
+  set nowrap                          " Don't wrap lines
+  set guicursor+=a:blinkon0           " Disable the blinking cursor
+  set showmatch                       " Show matching parenthesis
+  set scrolloff=10                    " Keep the cursor close to center
+  set sidescrolloff=10                " and middle
+  set splitbelow                      " New window will appear below the current window
+  set splitright                      " New window will appear to the right of the current window
+" }}}
+
+" Text editing --------------------------------------------------------- {{{
+  set spell                           " Use spell-checker
+  set encoding=utf-8                  " Default encoding
+  set synmaxcol=500                   " Disable highlighting for lines longer than 500 chars
+" }}}
+
+" Indentation ---------------------------------------------------------- {{{
+  set cindent                         " C indentation rules
+  set autoindent                      " Indent based on ruleset of language
+  set smartindent                     " Indent first line according to previous
+  set smarttab                        " Use shiftwidth to emulate tabs
+  set shiftround                      " Round indent to multiple of shiftwidth
+" }}}
+
+" Key-bindings --------------------------------------------------------- {{{
+  " Navigate by row instead of line
+  nnoremap j gj
+  nnoremap k gk
+  nnoremap gj j
+  nnoremap gk k
+
+  " Make yank´s behavior consistent
+  nnoremap Y y$
+
+  " Remove highlighted search-query with enter-key
+  nnoremap <cr> :nohlsearch<cr>
+
+  " Normalize regular-expression searches
+  nnoremap / /\v
+  vnoremap / /\v
+  nnoremap ? ?\v
+  vnoremap ? ?\v
+  cnoremap s/ s/\v
+  cnoremap s@ s@\v
+
+  " Prevent de-select when indenting blocks
+  vnoremap < <gv
+  vnoremap > >gv
+" }}}
+
+
+" }
+
 execute pathogen#infect()
 
 set fileencodings=ucs-bom,utf-8,cp1250
         " if there is a BOM, use it,
         " otherwise check if the file is valid UTF-8, if not, try to open
-        " in cp1250 as a last resort
+        " in cp1250 as a last resorts
+set encoding=utf-8
 
 
 set gdefault            " automatically set the g flag in :substitute

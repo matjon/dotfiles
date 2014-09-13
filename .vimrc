@@ -121,15 +121,17 @@ set showmatch
 
 execute pathogen#infect()
 
-
 set fileencodings=ucs-bom,utf-8,cp1250
+        " if there is a BOM, use it,
+        " otherwise check if the file is valid UTF-8, if not, try to open 
+        " in cp1250 as a last resort
 
 set expandtab
 "set cinoptions+={2
-set gdefault
 
+set gdefault            " automatically set the g flag in :substitute
 set ignorecase
-set autowrite
+
 
 
 
@@ -140,10 +142,36 @@ autocmd BufNewFile,BufRead *.h set textwidth=100
 
 
 
+" enable line numbering
+set number
+set numberwidth=5
+
+
+" Strip whitespace at the end of line
+" http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
+autocmd BufWritePre *.c :%s/\s\+$//e
+autocmd BufWritePre *.cpp :%s/\s\+$//e
+autocmd BufWritePre *.h :%s/\s\+$//e
+
+
+" http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
+" do not clear undo history when switching between buffers with :A
+set hidden
+set switchbuf=usetab,newtab
+
+set makeprg=make\ -j2
+set autowrite           " execute :wall when doing :make
+set clipboard=unnamed
 
 
 
+set nowrap
 
+set spell spelllang=en_us,pl
+" How to generate polish language spell file:
+"        cd ~/.vim/spell/
+"        Open vim
+"        :mkspel pl /usr/share/dict/polish
 
 
 
@@ -184,30 +212,6 @@ autocmd BufNewFile,BufRead *.h set textwidth=100
 
 
 
-
-
-
-
-" enable line numbering
-set number
-set numberwidth=5
-
-
-" Strip whitespace at the end of line
-" http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
-autocmd BufWritePre *.c :%s/\s\+$//e
-autocmd BufWritePre *.cpp :%s/\s\+$//e
-autocmd BufWritePre *.h :%s/\s\+$//e
-
-
-" http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
-" do not clear undo history when switching between buffers with :A
-set hidden
-set switchbuf=usetab,newtab
-
-set makeprg=make\ -j2
-set clipboard=unnamed
-
 " NERDTree support ----------------------------------------------------{
 
         map <C-H> <C-W>h
@@ -231,14 +235,6 @@ set clipboard=unnamed
 " }
 
 
-
-set nowrap
-
-set spell spelllang=en_us,pl
-" How to generate polish language spell file:
-"        cd ~/.vim/spell/
-"        Open vim
-"        :mkspel pl /usr/share/dict/polish
 
 
 

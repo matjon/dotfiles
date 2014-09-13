@@ -123,7 +123,7 @@ set showmatch
 
 " imported from natural.vim -----------------------------------------------{
 "       ttyfast - on by default
-        set ttimeoutlen=100 
+        set ttimeoutlen=10 
         set mouse=""
         set noautowriteall
         set nostartofline
@@ -151,8 +151,8 @@ set showmatch
   set nowrap                          " Don't wrap lines
   set guicursor+=a:blinkon0           " Disable the blinking cursor
   set showmatch                       " Show matching parenthesis
-  set scrolloff=10                    " Keep the cursor close to center
-  set sidescrolloff=10                " and middle
+  set scrolloff=5                    " Keep the cursor close to center
+"  set sidescrolloff=3                " and middle
   set splitbelow                      " New window will appear below the current window
   set splitright                      " New window will appear to the right of the current window
 " }}}

@@ -1,4 +1,4 @@
-" This vimrc file is based on:
+" This vimrc file is based on (among others):
 "       - the example vimrc file as found in Ubuntu:
 "
 "               Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -153,7 +153,7 @@ autocmd BufNewFile,BufRead *.h set textwidth=100
 
 
 
-" keyboard shortcuts    {
+" KEYBOARD SHORTCUTS  -----------------------------------------------------{
 
         " http://www.cs.oberlin.edu/~kuperman/help/vim/indenting.html
         set pastetoggle=<F5>
@@ -252,25 +252,28 @@ set spell spelllang=en_us,pl
 " todo: languagetool:
 " let g:languagetool_jar = '/home/mateusz/.vim/languagetool-commandline.jar'
 
-" vim-airline                                   {
-let g:airline#extensions#tabline#enabled = 1
-  if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-  endif
+" VIM-AIRLINE CONFIG--------------------------------------------------------{
 
-  " unicode symbols
-  " let g:airline_left_sep = '»'
-  let g:airline_left_sep = '▶'
-  " let g:airline_right_sep = '«'
-  let g:airline_right_sep = '◀'
-  " let g:airline_symbols.linenr = '␊'
-  " let g:airline_symbols.linenr = '␤'
-  let g:airline_symbols.linenr = '¶'
-  let g:airline_symbols.branch = '⎇'
-  let g:airline_symbols.paste = 'ρ'
-  " let g:airline_symbols.paste = 'Þ'
-  " let g:airline_symbols.paste = '∥'
-  let g:airline_symbols.whitespace = 'Ξ'
+        " based on some sample config from vim-airline
+        let g:airline#extensions#tabline#enabled = 1
+        if !exists('g:airline_symbols')
+                let g:airline_symbols = {}
+        endif
+
+        " unicode symbols
+        " let g:airline_left_sep = '»'
+        let g:airline_left_sep = '▶'
+        " let g:airline_right_sep = '«'
+        let g:airline_right_sep = '◀'
+        " let g:airline_symbols.linenr = '␊'
+        " let g:airline_symbols.linenr = '␤'
+        let g:airline_symbols.linenr = '¶'
+        let g:airline_symbols.branch = '⎇'
+        let g:airline_symbols.paste = 'ρ'
+        " let g:airline_symbols.paste = 'Þ'
+        " let g:airline_symbols.paste = '∥'
+        let g:airline_symbols.whitespace = 'Ξ'
+
 " }
 
 " TODO: Ctrl+Shift+Page{Up,Down} - przesuwa obecną kartę

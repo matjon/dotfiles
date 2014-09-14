@@ -294,10 +294,10 @@ set spelllang=en_us,pl
         " F2 - inserts a date at the end of a file and starts insert mode
         "      below it. Great for keeping NOTES.
         "      (based on an example in map.txt in vim documentation)
-        map  <F2>      Go<CR><C-R>=strftime("%c %Z")<CR><CR>
-        imap <F2> <Esc>Go<CR><C-R>=strftime("%c %Z")<CR><CR>
-        map  <F3>      o<CR>EDIT: <C-R>=strftime("%c %Z")<CR><CR>
-        imap <F3> <Esc>o<CR>EDIT: <C-R>=strftime("%c %Z")<CR><CR>
+        map  <F2>      Go<CR><C-R>=strftime("%c %Z")<CR><Esc><<<<<<<<<<o
+        imap <F2> <Esc>Go<CR><C-R>=strftime("%c %Z")<CR><Esc><<<<<<<<<<o
+        map  <F3>      o<CR>EDIT: <C-R>=strftime("%c %Z")<CR><Esc><<<<<<<<<<o
+        imap <F3> <Esc>o<CR>EDIT: <C-R>=strftime("%c %Z")<CR><Esc><<<<<<<<<<o
 
         " shortcuts to type less and overload small fingers less
         map s :A<CR>

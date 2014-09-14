@@ -275,6 +275,8 @@ set makeprg=make\ -j2
 set autowrite           " execute :wall when doing :make
 set clipboard=unnamed
 
+set title
+
 
 
 
@@ -425,6 +427,8 @@ set spelllang=en_us,pl
 "       - vim-autocorrect
 "               automatyczne podstawianie słów w angielskim,
 "               https://github.com/panozzaj/vim-autocorrect/tree/master
+"
+"       - przejrzeć: https://github.com/modeset/dotset/tree/master/bin
 
 " should come last
 autocmd BufRead COMMIT_EDITMSG goto 1

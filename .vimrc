@@ -320,6 +320,7 @@ set spelllang=en_us,pl
         " zmniejsza obciążenie małego palca
         map gu :
 
+        map gf :tabedit <cfile><CR>
 " }
 
 

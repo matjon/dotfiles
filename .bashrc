@@ -57,6 +57,9 @@ shopt -s cdspell
 
         #export PATH=$PATH:$HOME/bin/android/platform-tools:$HOME/bin/android/tools:$HOME/bin/android-ndk-r5c
 
+        #http://clang.llvm.org/docs/AddressSanitizer.html#introduction
+        export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.4
+
         export PATH="/media/Vista/install/octave/prefix/bin:/media/Vista/bin/bin:$HOME/bin:$PATH"
         export LD_LIBRARY_PATH=/media/Vista/install/octave/prefix/lib/octave/3.8.0/:/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:/media/Vista/bin/lib:$LD_LIBRARY_PATH
 

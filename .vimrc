@@ -264,6 +264,7 @@ endif
 autocmd BufWritePre *.c :Stripws
 autocmd BufWritePre *.cpp :Stripws
 autocmd BufWritePre *.h :Stripws
+autocmd BufWritePre *.tex :Stripws
 
 
 " http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers

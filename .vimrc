@@ -213,12 +213,20 @@ endif
   nnoremap <cr> :nohlsearch<cr>
 
   " Normalize regular-expression searches
-  nnoremap / /\v
-  vnoremap / /\v
-  nnoremap ? ?\v
-  vnoremap ? ?\v
-  cnoremap s/ s/\v
-  cnoremap s@ s@\v
+" nnoremap / /\v
+" vnoremap / /\v
+" nnoremap ? ?\v
+" vnoremap ? ?\v
+" cnoremap s/ s/\v
+" cnoremap s@ s@\v
+
+" very nomagic is very convenient when pasting input from web pages
+  nnoremap / /\V
+  vnoremap / /\V
+  nnoremap ? ?\V
+  vnoremap ? ?\V
+  cnoremap s/ s/\V
+  cnoremap s@ s@\V
 
   " Prevent de-select when indenting blocks
   vnoremap < <gv

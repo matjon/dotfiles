@@ -344,15 +344,16 @@ set spelllang=en_us,pl
 " ----------------------------------------------------------------------------
 "
 " Plugins I use:
+"
 " autocomplpop          - automatic word completion
 " a.vim                 - automatic switching between *.c <-> *.h
 " nerdtree              - a file browser on the right
 " vim-nerdtree-tabs     - make the file browser work correctly with multiple tabs
 " vim-airline           - used only for the tab line
+" LanguageTool          - grammar checking
 "
 " Plugins worth considering:
 " conqueterm_2.2.vmb  natural.vim  OmniCppComplete  vim-fugitive  vim-signify
-" LanguageTool
 " tabline.vim
 "
 
@@ -407,6 +408,12 @@ set spelllang=en_us,pl
 
 " }
 
+" LanguageTool CONFIG -----------------------------------------------------{
+        let g:languagetool_jar = '/home/mateusz/.vim/LanguageTool-2.6/languagetool-commandline.jar'
+        let g:languagetool_lang = 'pl'
+" }
+
+
 " TODO:
 "       - moving current tab with Ctrl+Shift+Page{Up,Down}
 "         we could use tabpagenr:
@@ -424,10 +431,6 @@ set spelllang=en_us,pl
 "       - completion with clang:
 "               set clang_library_path /usr/lib/i386-linux-gnu/libclang-3.4.so.1
 "               - also doesn't work
-"
-"       - languagetool (grammar checking)
-"         let g:languagetool_jar = '/home/mateusz/.vim/languagetool-commandline.jar'
-"               - does not work
 "
 "       - http://www.vim.org/scripts/script.php?script_id=4988 - automatic language
 "               detection

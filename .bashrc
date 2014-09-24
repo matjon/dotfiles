@@ -66,6 +66,10 @@ shopt -s cdspell
         #export DERBY_INSTALL=/home/mateusz/Studia/IOR/lib/db-derby-10.10.1.1-bin
         #export DERBY_HOME=$DERBY_INSTALL
 
+        #ignore case, 
+        export LESS="-I -R"
+        export PAGER=less
+
 # }
 
 # COLOR SUPPORT {

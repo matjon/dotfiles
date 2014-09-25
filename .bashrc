@@ -62,7 +62,7 @@ shopt -s cdspell
 
         export PATH="$HOME/bin:$PATH"
         export PATH="/media/Vista/bin/bin:$PATH"
-        export PATH="/media/atlas/tex/bin/i386-linux:$PATH"
+        export PATH="/media/atlas/tex2/bin/i386-linux:$PATH"
 
         export LD_LIBRARY_PATH=/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:/media/Vista/bin/lib:$LD_LIBRARY_PATH
 

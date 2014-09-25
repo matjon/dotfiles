@@ -60,16 +60,17 @@ shopt -s cdspell
         #http://clang.llvm.org/docs/AddressSanitizer.html#introduction
         export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.4
 
-        export PATH="/media/Vista/install/octave/prefix/bin:/media/Vista/bin/bin:$HOME/bin:$PATH"
+        export PATH="/media/atlas/tex/bin/i386-linux:/media/Vista/install/octave/prefix/bin:/media/Vista/bin/bin:$HOME/bin:$PATH"
         export LD_LIBRARY_PATH=/media/Vista/install/octave/prefix/lib/octave/3.8.0/:/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:/media/Vista/bin/lib:$LD_LIBRARY_PATH
 
         #export DERBY_INSTALL=/home/mateusz/Studia/IOR/lib/db-derby-10.10.1.1-bin
         #export DERBY_HOME=$DERBY_INSTALL
 
-        #ignore case, 
+        #ignore case, useful for git
         export LESS="-I -R"
         export PAGER=less
 
+        unset ftp_proxy
 # }
 
 # COLOR SUPPORT {

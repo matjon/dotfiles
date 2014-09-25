@@ -62,10 +62,9 @@ shopt -s cdspell
 
         export PATH="$HOME/bin:$PATH"
         export PATH="/media/Vista/bin/bin:$PATH"
-        #export PATH="/media/Vista/install/octave/prefix/bin:$PATH"
         export PATH="/media/atlas/tex/bin/i386-linux:$PATH"
 
-        export LD_LIBRARY_PATH=/media/Vista/install/octave/prefix/lib/octave/3.8.0/:/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:/media/Vista/bin/lib:$LD_LIBRARY_PATH
+        export LD_LIBRARY_PATH=/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:/media/Vista/bin/lib:$LD_LIBRARY_PATH
 
         #export DERBY_INSTALL=/home/mateusz/Studia/IOR/lib/db-derby-10.10.1.1-bin
         #export DERBY_HOME=$DERBY_INSTALL

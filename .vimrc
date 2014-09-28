@@ -330,6 +330,8 @@ set spelllang=en_us,pl
         map gu :
 
         map gf :tabedit <cfile><CR>
+
+        nmap gq gqap
 " }
 
 

@@ -419,8 +419,7 @@ set spelllang=en_us,pl
 
 
 " JSON specific settings --------------------------------------------------{
-        " Niestety nie działa
-        command -range=% JsonPrettyPrint :! python -m json.tool <CR>
+        command JsonPrettyPrint :%! python -m json.tool
 " }
 
 

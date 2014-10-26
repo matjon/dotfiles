@@ -444,6 +444,10 @@ set spelllang=en_us,pl
 "               https://github.com/panozzaj/vim-autocorrect/tree/master
 "
 "       - przejrzeć: https://github.com/modeset/dotset/tree/master/bin
+"
+"       - https://github.com/chrisbra/Recover.vim 
+"               opcja pokazywania różnicy przy odzyskiwaniu plików,
+"               - trzeba sprawdzić na ile to jest bezpieczne,
 
 " should come last
 autocmd BufRead COMMIT_EDITMSG goto 1

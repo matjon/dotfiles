@@ -353,6 +353,8 @@ set spelllang=en_us,pl
 " vim-nerdtree-tabs     - make the file browser work correctly with multiple tabs
 " vim-airline           - used only for the tab line
 " LanguageTool          - grammar checking
+" vim-json      https://github.com/elzr/vim-json
+"                       - elegackie formatowanie składni JSON
 "
 " Plugins worth considering:
 " conqueterm_2.2.vmb  natural.vim  OmniCppComplete  vim-fugitive  vim-signify
@@ -413,6 +415,12 @@ set spelllang=en_us,pl
 " LanguageTool CONFIG -----------------------------------------------------{
         let g:languagetool_jar = '/home/mateusz/.vim/LanguageTool-2.6/languagetool-commandline.jar'
         let g:languagetool_lang = 'pl'
+" }
+
+
+" JSON specific settings --------------------------------------------------{
+        " Niestety nie działa
+        command -range=% JsonPrettyPrint :! python -m json.tool <CR>
 " }
 
 

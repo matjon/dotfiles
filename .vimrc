@@ -164,7 +164,8 @@ endif
 "  set list listchars=tab:→\ ,trail:·  " Show 'invisible characters'
   set colorcolumn=80                  " Practice short code
   set number                          " Show line-numbers
-  set nowrap                          " Don't wrap lines
+" set nowrap                          " Don't wrap lines
+  set wrap
   set guicursor+=a:blinkon0           " Disable the blinking cursor
   set showmatch                       " Show matching parenthesis
 " set scrolloff=10                    " Keep the cursor close to center
@@ -420,6 +421,8 @@ set spelllang=en_us,pl
 
 " JSON specific settings --------------------------------------------------{
         command JsonPrettyPrint :%! python -m json.tool
+        " is is very annoying
+        let g:vim_json_syntax_conceal = 0
 " }
 
 

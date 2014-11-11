@@ -256,8 +256,6 @@ set fileencodings=ucs-bom,utf-8,cp1250
 
         "autocmd BufNewFile,BufRead *.txt set wrap textwidth=0 wrapmargin=80
 
-        set nowrap
-
         " line numbering
         set numberwidth=5
 

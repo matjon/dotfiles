@@ -108,9 +108,9 @@ set showmatch
 " imported from natural.vim -----------------------------------------------{
 " diff -U3 works correctly
 
-if has('autocmd')
-  filetype plugin indent on
-endif
+"if has('autocmd')
+" filetype plugin indent on
+"endif
 if has('syntax') && !exists('g:syntax_on')
   syntax enable
 endif

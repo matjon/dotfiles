@@ -259,6 +259,8 @@ set fileencodings=ucs-bom,utf-8,cp1250
         " line numbering
         set numberwidth=5
 
+        set formatoptions=tcroql
+
 " }
 
 

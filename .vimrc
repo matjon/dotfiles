@@ -1,3 +1,5 @@
+" vim: nowrap
+"
 " This vimrc file is based on (among others):
 "       - the example vimrc file as found in Ubuntu:
 "

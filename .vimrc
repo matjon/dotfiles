@@ -317,6 +317,10 @@ set spelllang=en_us,pl
         map s :A<CR>
         " imap <F3> <Esc>:A<CR>
         map gn :make<CR>
+
+        " czasami zamiast zapisania pliku przez pomyłkę wykonuję kompilację
+        autocmd BufRead COMMIT_EDITMSG map gn ZZ
+
         " map gu p
         map gj :cn<CR>
         map gk :cprev<CR>

@@ -1,5 +1,11 @@
 " vim: nowrap
 "
+" TODO:
+" - http://www.catonmat.net/blog/vim-plugins-surround-vim/ and others on that site
+"   - they are really nice
+" - https://github.com/ktosiek/dotfiles
+"       - some interesting concepts
+"
 " This vimrc file is based on (among others):
 "       - the example vimrc file as found in Ubuntu:
 "
@@ -367,9 +373,6 @@ set spelllang=en_us,pl
 " conqueterm_2.2.vmb  natural.vim  OmniCppComplete  vim-fugitive  vim-signify
 " tabline.vim
 "
-" TODO:
-" http://www.catonmat.net/blog/vim-plugins-surround-vim/ and others on that site
-"  - they are really nice
 
 " NERDTree support ----------------------------------------------------{
 

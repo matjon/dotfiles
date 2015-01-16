@@ -161,6 +161,17 @@ shopt -s cdspell
 
         # make less more friendly for non-text input files, see lesspipe(1)
         [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+
+#inspired by: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh
+        alias gc='git commit --verbose'
+        alias gca='git commit --all'
+        alias gs='git status'
+        alias gd='git diff'
+        alias gds='git diff --staged'
+        alias gai='git add -i'
+        alias ga='git add'
+
 # }
 
 # FUNCTIONS {

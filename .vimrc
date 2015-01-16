@@ -367,6 +367,9 @@ set spelllang=en_us,pl
 " conqueterm_2.2.vmb  natural.vim  OmniCppComplete  vim-fugitive  vim-signify
 " tabline.vim
 "
+" TODO:
+" http://www.catonmat.net/blog/vim-plugins-surround-vim/ and others on that site
+"  - they are really nice
 
 " NERDTree support ----------------------------------------------------{
 

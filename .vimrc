@@ -1,11 +1,5 @@
 " vim: nowrap
 "
-" TODO:
-" - http://www.catonmat.net/blog/vim-plugins-surround-vim/ and others on that site
-"   - they are really nice
-" - https://github.com/ktosiek/dotfiles
-"       - some interesting concepts
-"
 " This vimrc file is based on (among others):
 "       - the example vimrc file as found in Ubuntu:
 "
@@ -438,7 +432,23 @@ set spelllang=en_us,pl
 " }
 
 
+" Interesting dotfiles:
+"       - https://github.com/rht/eigenvimrc
+"               This script scrapes vimrc's hosted in github and returns the
+"               most commonly used vim configurations.
+"
+"       - https://github.com/tpope/vim-sensible
+"
+"       - https://github.com/ktosiek/dotfiles
+"               - dotfiles from my mate,
+"
 " TODO:
+"       - https://github.com/ktosiek/dotfiles
+"
+"       - http://www.catonmat.net/blog/vim-plugins-surround-vim/ 
+"               and other plugins describet on that site
+"               - they are really nice
+"
 "       - moving current tab with Ctrl+Shift+Page{Up,Down}
 "         we could use tabpagenr:
 "                map <C:execute (tabpagenr() +1) . 'tabmove'

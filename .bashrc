@@ -165,12 +165,18 @@ shopt -s cdspell
 
 #inspired by: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh
         alias gc='git commit --verbose'
-        alias gca='git commit --all'
+        alias gca='git commit --all --verbose'
         alias gs='git status'
         alias gd='git diff'
         alias gds='git diff --staged'
         alias gai='git add -i'
         alias ga='git add'
+
+        alias gl='git log'
+        alias gls='git log --stat'
+        alias glp='git log -p'
+        alias glo='git log --online'
+
 
 # }
 

@@ -363,6 +363,9 @@ set spelllang=en_us,pl
 " vim-json      https://github.com/elzr/vim-json
 "                       - elegackie formatowanie składni JSON
 "
+" vim-session   https://github.com/xolox/vim-session/
+"                       - saving session
+"
 " Plugins worth considering:
 " conqueterm_2.2.vmb  natural.vim  OmniCppComplete  vim-fugitive  vim-signify
 " tabline.vim
@@ -431,6 +434,39 @@ set spelllang=en_us,pl
         let g:vim_json_syntax_conceal = 0
 " }
 
+" Session save ------------------------------------------------------------{
+
+        "set sessionoptions=blank,buffers,curdir,folds,help,options,tabpages,winsize
+        set sessionoptions=blank,curdir,help,tabpages
+        " disabled:
+        " buffers       - I don't use it,
+        " folds         - I don't use it,
+        " globals       (global variables),
+        " localoptions
+        " options
+        " resize - usable only for GUI,
+        " sesdir        - I don't use it
+        " slash         - I don't switch windows/linux
+        " unix
+        " winpos
+        " winsize
+        
+        " based on http://stackoverflow.com/a/13940563
+        " :gs?\s?_? 
+        "        - zamiana wszystkich tab i spacji na znaki podkreślenia
+        let s:dir_name=fnamemodify(getcwd(), ':t:gs?\s?_?')
+
+        let g:session_default_name = "auto_session_" . s:dir_name . strftime('_%Y_%m_%d__%H_%M_%S')
+        let g:session_command_aliases = 1
+        let g:session_autosave_periodic = 1
+        
+        " Since commit a047591 vim-session uses :mksession, before this
+        " commit it saved the session using a custom script.
+        " I may try to port the old code because the new one does not work
+        " correctly with NERDTreeTabs
+        
+        autocmd BufEnter SaveSession
+" }
 
 " Interesting dotfiles:
 "       - https://github.com/rht/eigenvimrc

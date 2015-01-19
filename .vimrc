@@ -429,7 +429,7 @@ set spelllang=en_us,pl
 
 
 " JSON specific settings --------------------------------------------------{
-        command JsonPrettyPrint :%! python -m json.tool
+        command! JsonPrettyPrint :%! python -m json.tool
         " is is very annoying
         let g:vim_json_syntax_conceal = 0
 " }

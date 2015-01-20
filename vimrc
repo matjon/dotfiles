@@ -38,7 +38,21 @@ endif
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
+
 set nocompatible
+filetype off
+
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'vim-scripts/a.vim'
+
+call vundle#end()
+
+
+
+
+
 
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -239,7 +253,7 @@ endif
 
 " }
 
-execute pathogen#infect()
+" execute pathogen#infect()
 
 set fileencodings=ucs-bom,utf-8,cp1250
         " if there is a BOM, use it,

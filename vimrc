@@ -524,7 +524,7 @@ set spelllang=en_us,pl
         " I may try to port the old code because the new one does not work
         " correctly with NERDTreeTabs
         
-        autocmd BufEnter SaveSession
+        " autocmd BufEnter SaveSession
 " }
 
 

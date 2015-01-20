@@ -1,5 +1,3 @@
-
-
 To install:
 
         git clone
@@ -9,5 +7,4 @@ To install:
         unzip LanguageTool-2.8.zip
         rm LanguageTool-2.8.zip
 
-`
-
+Then add relevant symlinks in the home dir

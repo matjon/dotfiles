@@ -8,3 +8,5 @@ vim/LanguageTool-*
 #my spell list additions
 vim/spell/*.add*
 vim/spell/*.add.*
+
+old/

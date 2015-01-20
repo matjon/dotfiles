@@ -36,6 +36,13 @@ if v:progname =~? "evim"
   finish
 endif
 
+if $USER=="mateusz"
+" a similar check is in vim/ftdetect/not.vim
+  let g:main_config=1
+else
+  let g:main_config=0
+endif
+
 set nocompatible
 filetype off
 
@@ -54,16 +61,22 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 " Nerdtree as a panel
 
-Plugin 'vim-scripts/a.vim'
-" 'switch between source files and header files quickly.'
+Plugin 'freitass/todo.txt-vim'
+" simple TODO lists
 
-Plugin 'vim-scripts/AutoComplPop'
-" 'automatically opens popup menu for completions'
+if g:main_config
+        Plugin 'vim-scripts/a.vim'
+        " 'switch between source files and header files quickly.'
 
-Plugin 'vim-scripts/LanguageTool'
-" Grammar checking
+        Plugin 'vim-scripts/AutoComplPop'
+        " 'automatically opens popup menu for completions'
 
-Plugin 'bling/vim-airline'
+        Plugin 'vim-scripts/LanguageTool'
+        " Grammar checking
+
+        Plugin 'bling/vim-airline'
+
+endif
 
 Plugin 'leshill/vim-json'
 " 'Syntax highlighting for JSON'
@@ -175,7 +188,17 @@ endif
   set backspace=indent,eol,start      " Make backspace behave normally.
 " set modelines=0                     " Prevents modeline exploits
   set nostartofline                   " Keep cursor-position when switching buffers
+if g:main_config
   set backup                          " Turn on backup
+else
+  set nobackup
+  
+" set nowritebackup     " I really don't need even temporary backup copies 
+                        " while saving the file
+                        " ext4 provides protection in this case
+  
+        " but they don't do much harm either
+endif
                                " NOTE: this is not enabled automatically
 " set backupdir=~/.vim/backup         " Where to store backup files
 " set directory=~/.vim/swap           " Where to store swap files
@@ -416,7 +439,11 @@ set spelllang=en_us,pl
         " map <F3> :NERDTree<CR> <C-W>L 20<C-W><
         let g:nerdtree_tabs_open_on_console_startup = 1
         let g:NERDTreeWinPos = 'right'
-        let g:NERDTreeWinSize = 21
+        if g:main_config
+                let g:NERDTreeWinSize = 21
+        else
+                let g:NERDTreeWinSize = 26
+        endif
         let g:NERDTreeIgnore = ['\.o$', '\.swp', '\~$']
         let g:NERDTreeShowHidden=1
 
@@ -499,6 +526,12 @@ set spelllang=en_us,pl
         
         autocmd BufEnter SaveSession
 " }
+
+
+if main_config == 0
+        autocmd CursorHoldI * silent wall
+        autocmd CursorHold * silent wall
+endif
 
 " Interesting dotfiles:
 "       - https://github.com/rht/eigenvimrc

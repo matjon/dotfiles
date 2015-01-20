@@ -10,4 +10,7 @@ au BufRead,BufNewFile *.txt      set filetype=not
 " i podobnych.
 " Zobacz więcej :help new-filetype 
 " 	- przypadek B
-"au BufRead,BufNewFile *            setfiletype not
+"
+if $USER!="mateusz"
+        au BufRead,BufNewFile *            setfiletype not
+endif

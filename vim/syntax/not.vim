@@ -26,3 +26,13 @@ setlocal nospell
 setlocal nonumber
 setlocal colorcolumn=0
 
+" I don't remember why I have been using it
+" I should check the settings below
+setlocal nosmartindent
+setlocal nosmarttab
+setlocal noshiftround
+
+setlocal noexpandtab
+
+" autocmd CursorHoldI * silent wall
+" autocmd CursorHold * silent wall

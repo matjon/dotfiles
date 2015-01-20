@@ -196,7 +196,10 @@ endif
 " }}}
 
 " Scratch -------------------------------------------------------------- {{{
-  set hidden                          " Allow un-saved buffers in background
+" set hidden                          " Allow un-saved buffers in background
+        " hidden buffers are really annoying
+        " I will switch them on only for *.c, *.h, *.cpp because they make using
+        " a.vim more comfortable
 " }}}
 
 " History -------------------------------------------------------------- {{{
@@ -299,6 +302,10 @@ set fileencodings=ucs-bom,utf-8,cp1250
         autocmd BufNewFile,BufRead *.cpp set textwidth=100
         autocmd BufNewFile,BufRead *.h set textwidth=100
 
+        autocmd BufNewFile,BufRead *.cpp setlocal bufhidden
+        autocmd BufNewFile,BufRead *.c   setlocal bufhidden
+        autocmd BufNewFile,BufRead *.h   setlocal bufhidden
+
         "autocmd BufNewFile,BufRead *.txt set wrap textwidth=0 wrapmargin=80
 
         " line numbering
@@ -323,7 +330,7 @@ autocmd BufWritePre *.tex :Stripws
 
 " http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
 " do not clear undo history when switching between buffers with :A
-set hidden
+" set hidden
 set switchbuf=usetab,newtab
 
 set makeprg=make\ -j2

@@ -478,12 +478,21 @@ set spelllang=en_us,pl
 "       - https://github.com/ktosiek/dotfiles
 "               - dotfiles from my mate,
 "
-" TODO:
-"       - https://github.com/ktosiek/dotfiles
+" TODO (in the order of priority):
+"       - http://peterodding.com/code/vim/notes
+"               - a really nice plugin for managing notes
+"       - http://peterodding.com/code/vim/easytags
+"               - wrapper for exuberant ctags
+"
+"       - http://peterodding.com/code/vim/
+"               - a collection of great vim plugins,
 "
 "       - http://www.catonmat.net/blog/vim-plugins-surround-vim/ 
 "               and other plugins describet on that site
 "               - they are really nice
+"
+"       - https://github.com/ktosiek/dotfiles
+"
 "
 "       - moving current tab with Ctrl+Shift+Page{Up,Down}
 "         we could use tabpagenr:

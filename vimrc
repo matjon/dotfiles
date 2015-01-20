@@ -45,7 +45,31 @@ filetype off
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+
+
+Plugin 'xolox/vim-misc'
+" Required by vim-session
+Plugin 'xolox/vim-session'
+" Session management for vim
+
+Plugin 'scrooloose/nerdtree'
+" A file system browser
+Plugin 'jistr/vim-nerdtree-tabs'
+" Nerdtree as a panel
+
 Plugin 'vim-scripts/a.vim'
+" 'switch between source files and header files quickly.'
+
+Plugin 'vim-scripts/AutoComplPop'
+" 'automatically opens popup menu for completions'
+
+Plugin 'vim-scripts/LanguageTool'
+" Grammar checking
+
+Plugin 'bling/vim-airline'
+
+Plugin 'leshill/vim-json'
+" 'Syntax highlighting for JSON'
 
 call vundle#end()
 

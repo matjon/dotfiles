@@ -461,7 +461,7 @@ set spelllang=en_us,pl
 " }
 
 " LanguageTool CONFIG -----------------------------------------------------{
-        let g:languagetool_jar = '/home/mateusz/.vim/LanguageTool-2.6/languagetool-commandline.jar'
+        let g:languagetool_jar = '~/.vim/LanguageTool-2.8/languagetool-commandline.jar'
         let g:languagetool_lang = 'pl'
 " }
 

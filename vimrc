@@ -36,9 +36,6 @@ if v:progname =~? "evim"
   finish
 endif
 
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-
 set nocompatible
 filetype off
 
@@ -73,6 +70,14 @@ Plugin 'leshill/vim-json'
 
 call vundle#end()
 
+" autocomplpop          - automatic word completion
+" a.vim                 - automatic switching between *.c <-> *.h
+" nerdtree              - a file browser on the right
+" vim-nerdtree-tabs     - make the file browser work correctly with multiple tabs
+" vim-airline           - used only for the tab line
+" LanguageTool          - grammar checking
+" vim-json              - elegackie formatowanie składni JSON
+" vim-session           - saving session
 
 
 
@@ -390,24 +395,6 @@ set spelllang=en_us,pl
 " PLUGIN SUPPORT
 " ----------------------------------------------------------------------------
 "
-" Plugins I use:
-"
-" autocomplpop          - automatic word completion
-" a.vim                 - automatic switching between *.c <-> *.h
-" nerdtree              - a file browser on the right
-" vim-nerdtree-tabs     - make the file browser work correctly with multiple tabs
-" vim-airline           - used only for the tab line
-" LanguageTool          - grammar checking
-" vim-json      https://github.com/elzr/vim-json
-"                       - elegackie formatowanie składni JSON
-"
-" vim-session   https://github.com/xolox/vim-session/
-"                       - saving session
-"
-" Plugins worth considering:
-" conqueterm_2.2.vmb  natural.vim  OmniCppComplete  vim-fugitive  vim-signify
-" tabline.vim
-"
 
 " NERDTree support ----------------------------------------------------{
 
@@ -515,6 +502,12 @@ set spelllang=en_us,pl
 "
 "       - https://github.com/ktosiek/dotfiles
 "               - dotfiles from my mate,
+"
+" Plugins worth considering:
+" conqueterm_2.2.vmb  natural.vim  OmniCppComplete  vim-fugitive  vim-signify
+" tabline.vim
+" Recover.vim todo.txt-vim
+"
 "
 " TODO (in the order of priority):
 "       - http://peterodding.com/code/vim/notes

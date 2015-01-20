@@ -327,9 +327,9 @@ set fileencodings=ucs-bom,utf-8,cp1250
         autocmd BufNewFile,BufRead *.cpp set textwidth=100
         autocmd BufNewFile,BufRead *.h set textwidth=100
 
-        autocmd BufNewFile,BufRead *.cpp setlocal bufhidden
-        autocmd BufNewFile,BufRead *.c   setlocal bufhidden
-        autocmd BufNewFile,BufRead *.h   setlocal bufhidden
+        autocmd BufNewFile,BufRead *.cpp setlocal bufhidden=hide
+        autocmd BufNewFile,BufRead *.c   setlocal bufhidden=hide
+        autocmd BufNewFile,BufRead *.h   setlocal bufhidden=hide
 
         "autocmd BufNewFile,BufRead *.txt set wrap textwidth=0 wrapmargin=80
 

@@ -28,9 +28,9 @@
 "               COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 "               IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 "               CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-"
-"
-"
+
+
+
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
@@ -92,7 +92,9 @@ call vundle#end()
 " vim-json              - elegackie formatowanie składni JSON
 " vim-session           - saving session
 
-
+" Differences between new dotfiles/vim and old ~/.vim_old:
+"       - vim-session - modified in ~/.vim_old,
+"
 
 
 

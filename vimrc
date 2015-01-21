@@ -389,7 +389,9 @@ set spelllang=en_us,pl
         imap <F3> <Esc>o<CR>EDIT: <C-R>=strftime("%c %Z")<CR><Esc><<<<<<<<<<o
 
         " shortcuts to type less and overload small fingers less
-        map s :A<CR>
+        if main_config
+                map s :A<CR>
+        endif
         " imap <F3> <Esc>:A<CR>
         map gn :make<CR>
 
@@ -461,6 +463,7 @@ set spelllang=en_us,pl
 
 " VIM-AIRLINE CONFIG --------------------------------------------------------{
 
+if main_config
         " based on some sample config from vim-airline
         let g:airline#extensions#tabline#enabled = 1
         if !exists('g:airline_symbols')
@@ -480,12 +483,15 @@ set spelllang=en_us,pl
         " let g:airline_symbols.paste = 'Þ'
         " let g:airline_symbols.paste = '∥'
         let g:airline_symbols.whitespace = 'Ξ'
+endif
 
 " }
 
 " LanguageTool CONFIG -----------------------------------------------------{
+if main_config
         let g:languagetool_jar = '~/.vim/LanguageTool-2.8/languagetool-commandline.jar'
         let g:languagetool_lang = 'pl'
+endif
 " }
 
 

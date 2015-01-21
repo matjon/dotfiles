@@ -153,8 +153,16 @@ shopt -s cdspell
         alias ll='ls -alF'
         alias la='ls -A'
         alias l='ls -CF'
+
+        #tell bash to sleep
         alias ZZ=exit
+        #alias z=exit
         alias zz=exit
+        alias zzz=exit
+        alias zzzz=exit
+        alias zzzzz=exit
+        alias zzzzzz=exit
+        alias zzzzzzz=exit
 
         #http://www.drbunsen.org/vim-croquet/
         alias vim='vim -w ~/.vimlog "$@"'

@@ -4,6 +4,7 @@
 vim/bundle
 vim/sessions
 vim/LanguageTool-*
+.netrwhist
 
 #my spell list additions
 vim/spell/*.add*

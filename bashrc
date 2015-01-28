@@ -76,6 +76,9 @@ shopt -s cdspell
         export LESS="-I -R"
         export PAGER=less
 
+        #for wodim
+        export CDR_DEVICE="/dev/dvd3"
+
         unset ftp_proxy
 # }
 

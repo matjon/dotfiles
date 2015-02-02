@@ -62,7 +62,7 @@ shopt -s cdspell
 
         export PATH="$HOME/bin:$PATH"
         export PATH="/media/Vista/bin/bin:$PATH"
-        export PATH="/media/ext1T-home/dump/obszar_roboczy/texlive/bin/i386-linux/:$PATH"
+        export PATH="/media/ext1T-home/obszar_roboczy/texlive/bin/i386-linux:$PATH"
         export PATH="/media/Vista/install/sleuthkit/bin:$PATH"
 
         export LD_LIBRARY_PATH=/media/Vista/bin/lib:$LD_LIBRARY_PATH

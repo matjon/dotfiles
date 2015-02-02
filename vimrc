@@ -526,6 +526,7 @@ endif
         let g:session_default_name = "auto_session_" . s:dir_name . strftime('_%Y_%m_%d__%H_%M_%S')
         let g:session_command_aliases = 1
         let g:session_autosave_periodic = 1
+        let g:session_persist_colors = 0
         
         " Since commit a047591 vim-session uses :mksession, before this
         " commit it saved the session using a custom script.

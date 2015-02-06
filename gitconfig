@@ -12,3 +12,8 @@
 	reflogexpiasdfre = never
 	pruneexpire = never
 	reflogexpireUnreachable = never
+
+[annex]
+        #http://git-annex.branchable.com/design/metadata/
+        #When annex.genmetadata is set, git annex add automatically attaches some metadata to a file. Currently year and month fields, from its mtime.
+        genmetadata = true

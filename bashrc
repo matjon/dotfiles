@@ -154,6 +154,7 @@ shopt -s cdspell
 
         # some more ls aliases
         alias ll='ls -alF'
+        alias llt='ls -alF --sort=time'
         alias la='ls -A'
         alias l='ls -CF'
 

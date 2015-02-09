@@ -12,7 +12,7 @@ To install:
         #specify commit SHA1 of last "stable" version
         git checkout e8bfc9f1d627c44c9eabadf88ac528bd0140408b
 
-        cd ..   
+        cd ../.. 
         #we are now in ./vim/
         wget https://languagetool.org/download/LanguageTool-2.8.zip
         unzip LanguageTool-2.8.zip

@@ -79,6 +79,11 @@ if g:main_config
 endif
 
 Plugin 'leshill/vim-json'
+
+" it's necessary for cvim, unfortunately
+" We set pinned=1 to get last stable version
+Plugin 'chrisbra/Recover.vim', {'pinned': 1}
+
 " 'Syntax highlighting for JSON'
 
 call vundle#end()

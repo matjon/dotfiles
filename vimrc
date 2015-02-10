@@ -528,6 +528,8 @@ endif
                substitute/\V\\u0179/Ź/  
                substitute/\V\\u017b/Ż/  
 
+               substitute/\V\\"/"/e
+
                " newline
                substitute/\V\\n/\r/
         endfunction

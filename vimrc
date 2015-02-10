@@ -508,30 +508,30 @@ endif
 
         function! JsonDecodePL() 
                " http://pl.wikipedia.org/wiki/Alfabet_polski#Kodowanie_polskich_znak.C3.B3w_w_HTML
-               substitute/\V\\u0105/ą/
-               substitute/\V\\u0107/ć/
-               substitute/\V\\u0119/ę/
-               substitute/\V\\u0142/ł/
-               substitute/\V\\u0144/ń/
-               substitute/\V\\u00f3/ó/
-               substitute/\V\\u015b/ś/
-               substitute/\V\\u017a/ź/  
-               substitute/\V\\u017c/ż/  
+               substitute/\V\\u0105/ą/e
+               substitute/\V\\u0107/ć/e
+               substitute/\V\\u0119/ę/e
+               substitute/\V\\u0142/ł/e
+               substitute/\V\\u0144/ń/e
+               substitute/\V\\u00f3/ó/e
+               substitute/\V\\u015b/ś/e
+               substitute/\V\\u017a/ź/e
+               substitute/\V\\u017c/ż/e
 
-               substitute/\V\\u0104/Ą/
-               substitute/\V\\u0106/Ć/
-               substitute/\V\\u0118/Ę/
-               substitute/\V\\u0141/Ł/
-               substitute/\V\\u0143/Ń/
-               substitute/\V\\u00d3/Ó/
-               substitute/\V\\u015a/Ś/
-               substitute/\V\\u0179/Ź/  
-               substitute/\V\\u017b/Ż/  
+               substitute/\V\\u0104/Ą/e
+               substitute/\V\\u0106/Ć/e
+               substitute/\V\\u0118/Ę/e
+               substitute/\V\\u0141/Ł/e
+               substitute/\V\\u0143/Ń/e
+               substitute/\V\\u00d3/Ó/e
+               substitute/\V\\u015a/Ś/e
+               substitute/\V\\u0179/Ź/e
+               substitute/\V\\u017b/Ż/e
 
                substitute/\V\\"/"/e
 
                " newline
-               substitute/\V\\n/\r/
+               substitute/\V\\n/\r/e
         endfunction
 
         command! JsonDecodePL :call JsonDecodePL()

@@ -84,6 +84,7 @@ Plugin 'leshill/vim-json'
 " We set pinned=1 to get last stable version
 Plugin 'chrisbra/Recover.vim', {'pinned': 1}
 
+
 " 'Syntax highlighting for JSON'
 
 call vundle#end()
@@ -504,6 +505,34 @@ endif
         command! JsonPrettyPrint :%! python -m json.tool
         " it is very annoying
         let g:vim_json_syntax_conceal = 0
+
+        function! JsonDecodePL() 
+               " http://pl.wikipedia.org/wiki/Alfabet_polski#Kodowanie_polskich_znak.C3.B3w_w_HTML
+               substitute/\V\\u0105/ą/
+               substitute/\V\\u0107/ć/
+               substitute/\V\\u0119/ę/
+               substitute/\V\\u0142/ł/
+               substitute/\V\\u0144/ń/
+               substitute/\V\\u00f3/ó/
+               substitute/\V\\u015b/ś/
+               substitute/\V\\u017a/ź/  
+               substitute/\V\\u017c/ż/  
+
+               substitute/\V\\u0104/Ą/
+               substitute/\V\\u0106/Ć/
+               substitute/\V\\u0118/Ę/
+               substitute/\V\\u0141/Ł/
+               substitute/\V\\u0143/Ń/
+               substitute/\V\\u00d3/Ó/
+               substitute/\V\\u015a/Ś/
+               substitute/\V\\u0179/Ź/  
+               substitute/\V\\u017b/Ż/  
+
+               " newline
+               substitute/\V\\n/\r/
+        endfunction
+
+        command! JsonDecodePL :call JsonDecodePL()
 " }
 
 " Session save ------------------------------------------------------------{

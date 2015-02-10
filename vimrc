@@ -76,6 +76,12 @@ if g:main_config
 
         Plugin 'bling/vim-airline'
 
+        " Plugin 'tpope/vim-fugitive'
+
+        " Plugin 'mhinz/vim-signify'
+        "       - adds signs at the left to show what has been modified
+        "       - unfortunately, it is annoying
+
 endif
 
 Plugin 'leshill/vim-json'
@@ -592,6 +598,9 @@ endif
 " conqueterm_2.2.vmb  natural.vim  OmniCppComplete  vim-fugitive  vim-signify
 " tabline.vim
 " Recover.vim todo.txt-vim
+"
+"       http://learnvimscriptthehardway.stevelosh.com/
+"               - very interesting vimscript tutorial
 "
 "
 " TODO (in the order of priority):

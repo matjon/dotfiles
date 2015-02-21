@@ -73,7 +73,7 @@ shopt -s cdspell
         #export DERBY_HOME=$DERBY_INSTALL
 
         #ignore case, useful for git
-        export LESS="-I -R"
+        export LESS="-I -R --long-prompt"
         export PAGER=less
 
         #for wodim

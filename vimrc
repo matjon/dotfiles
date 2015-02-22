@@ -84,6 +84,8 @@ if g:main_config
 
 endif
 
+
+" 'Syntax highlighting for JSON'
 Plugin 'leshill/vim-json'
 
 " it's necessary for cvim, unfortunately
@@ -91,7 +93,13 @@ Plugin 'leshill/vim-json'
 Plugin 'chrisbra/Recover.vim', {'pinned': 1}
 
 
-" 'Syntax highlighting for JSON'
+" 'This plugin attempts to solve the issue of quitting a window, and then
+" realizing you actually need it moments later. It simply lets you "undo" the
+" quit, similar to the way you would restore a just-closed tab in your
+" browser.'
+" Niestety wymaga vim >= 7.4
+" Plugin 'AndrewRadev/undoquit.vim'
+
 
 call vundle#end()
 

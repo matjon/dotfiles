@@ -79,6 +79,9 @@ shopt -s cdspell
         #for wodim
         export CDR_DEVICE="/dev/dvd3"
 
+        #8*16 = 128MB cache
+        export AFFLIB_CACHE_PAGES=8
+
         unset ftp_proxy
 # }
 

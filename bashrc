@@ -9,19 +9,6 @@
 #TODO: http://www.thegeekstuff.com/tag/productivity-tips-for-geeks/
 #TODO: http://www.thegeekstuff.com/2008/10/6-awesome-linux-cd-command-hacks-productivity-tip3-for-geeks/#more-233
 
-
-#sometimes when running 
-#sudo -u hidden bash 
-#the variables may not be set correctly, and so this bashrc file will be sourced
-#instead of the proper one in ~hidden
-if [[ $UID == 990 ]]; then
-	export TERM=xterm-256color
-	export HOME=/home/hidden
-	export DISPLAY=:0.0
-	cd $HOME
-	exec bash
-fi
-
 #if [[ $(tty | grep /dev/tty) ]]; then
 #	exit;
 #fi

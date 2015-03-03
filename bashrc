@@ -161,6 +161,9 @@ shopt -s cdspell
         #http://www.drbunsen.org/vim-croquet/
         alias vim='vim -w ~/.vimlog "$@"'
 
+        #it is annoying when I type "FAHClient" instead of "FAHControl"
+        alias FAHClient='sl'
+
         # make less more friendly for non-text input files, see lesspipe(1)
         [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 

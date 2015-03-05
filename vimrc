@@ -74,7 +74,7 @@ if g:main_config
         Plugin 'vim-scripts/LanguageTool'
         " Grammar checking
 
-        Plugin 'bling/vim-airline'
+        " Plugin 'bling/vim-airline'
 
         " Plugin 'tpope/vim-fugitive'
 

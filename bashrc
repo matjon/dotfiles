@@ -229,6 +229,13 @@ shopt -s cdspell
                 cd $my_date
         }
 
+        #mkdir and cd to it
+        function md()
+        {
+                mkdir "$1"
+                cd "$1"
+        }
+
 # }
 
 

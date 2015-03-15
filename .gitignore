@@ -11,3 +11,4 @@ vim/spell/*.add*
 vim/spell/*.add.*
 
 old/
+private/

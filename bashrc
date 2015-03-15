@@ -239,6 +239,8 @@ shopt -s cdspell
 # }
 
 
+. ~/dotfiles/private/bashrc || true
+
 
 # HISTORY CONFIGURATION
 ##### OLD HISTORY CONFIGURATION 

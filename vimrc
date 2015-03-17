@@ -448,7 +448,15 @@ set spelllang=en_us,pl
 " ----------------------------------------------------------------------------
 " PLUGIN SUPPORT
 " ----------------------------------------------------------------------------
-"
+
+
+" AutoComplPop --------------------------------------------------------{
+
+        " do not treat a hyphen as a word break.
+        " This is very helpful when using filenames containing hyphens
+        set iskeyword+=-
+
+" }
 
 " NERDTree support ----------------------------------------------------{
 
@@ -516,7 +524,12 @@ endif
 
 
 " JSON specific settings --------------------------------------------------{
+       
+        " after execution of this command all line endings are in "mac" style
         command! JsonPrettyPrint :%! python -m json.tool
+
+
+
         " it is very annoying
         let g:vim_json_syntax_conceal = 0
 

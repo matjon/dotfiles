@@ -6,6 +6,12 @@
 
 syn match Type '^\(pon\|wto\|śro\|czw\|pią\|sob\|nie\)\, \d\+ \(sty\|lut\|mar\|kwi\|maj\|cze\|lip\|sie\|wrz\|paź\|lis\|gru\) 201\d\, \d\d:\d\d:\d\d \(CEST\|CET\)'
 syn match Comment 'EDIT\: \(pon\|wto\|śro\|czw\|pią\|sob\|nie\)\, \d\+ \(sty\|lut\|mar\|kwi\|maj\|cze\|lip\|sie\|wrz\|paź\|lis\|gru\) 201\d\, \d\d:\d\d:\d\d \(CEST\|CET\)'
+
+syn match Todo 'IMPORTANT'
+syn match Todo 'ISTOTNE'
+syn match Todo 'WAŻNE'
+syn match Todo 'WAZNE'
+
 " URLs
 " syn match Constant '\v<(http|https|ftp)\:\S*'
 " syn match Constant '\v<www\.\S*'

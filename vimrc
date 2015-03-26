@@ -405,8 +405,8 @@ set spelllang=en_us,pl
         "      (based on an example in map.txt in vim documentation)
         map  <F2>      Go<CR><C-R>=strftime("%c %Z")<CR><Esc><<<<<<<<<<o
         imap <F2> <Esc>Go<CR><C-R>=strftime("%c %Z")<CR><Esc><<<<<<<<<<o
-        map  <F3>      o<CR>EDIT: <C-R>=strftime("%c %Z")<CR><Esc><<<<<<<<<<o
-        imap <F3> <Esc>o<CR>EDIT: <C-R>=strftime("%c %Z")<CR><Esc><<<<<<<<<<o
+        map  <F3>      o<CR>EDIT: <C-R>=strftime("%c %Z")<CR><Esc>o
+        imap <F3> <Esc>o<CR>EDIT: <C-R>=strftime("%c %Z")<CR><Esc>o
 
         " shortcuts to type less and overload small fingers less
         if main_config

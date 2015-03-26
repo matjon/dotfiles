@@ -159,7 +159,7 @@ shopt -s cdspell
         alias zzzzzzz=exit
 
         #http://www.drbunsen.org/vim-croquet/
-        alias vim='vim -w ~/.vimlog "$@"'
+        #alias vim='vim -w ~/.vimlog "$@"'
 
         #it is annoying when I type "FAHClient" instead of "FAHControl"
         alias FAHClient='sl'

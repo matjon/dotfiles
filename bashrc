@@ -229,6 +229,12 @@ shopt -s cdspell
                 cd $my_date
         }
 
+        #compress
+        #function c() 
+        #{
+        #        tar -c -f "$1".tar.gz -a "$1" 
+        #}
+
         #mkdir and cd to it
         function md()
         {

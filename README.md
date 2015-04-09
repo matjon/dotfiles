@@ -18,6 +18,10 @@ To install:
         unzip LanguageTool-2.8.zip
         rm LanguageTool-2.8.zip
 
+        mkdir -p ~/.local/share/gtksourceview-3.0/language-specs/
+        ln -s ~/dotfiles/gedit_syntax/notatka.lang  ~/.local/share/gtksourceview-3.0/language-specs/notatka.lang
+
+
 Then:
 
 - add relevant symlinks in the home dir,
@@ -26,8 +30,9 @@ Then:
 
 - execute :PluginInstall,
 
-- restart vim.
+- restart vim,
         
+- open `gedit`, go to Edit -> Preferences, tab "Fonts and colors" and add `gedit_syntax/my_classic.xml` as a custom color scheme.
 
 
 File vim/spell/pl.utf-8.spl was generated from /usr/share/dict/polish - package

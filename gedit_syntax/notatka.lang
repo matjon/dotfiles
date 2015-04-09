@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Based on:
+ c.lang,
+         Authors: Marco Barisione, Emanuele Aina
+         Copyright (C) 2005-2007 Marco Barisione <barisione@gmail.com>
+         Copyright (C) 2005-2007 Emanuele Aina
+
+ markdown.lang,
+         Author: Jean-Philippe Fleury
+         Copyright (C) 2011 Jean-Philippe Fleury <contact@jpfleury.net>
+
+ examples in:
+         https://developer.gnome.org/gtksourceview/stable/lang-reference.html
+         https://developer.gnome.org/gtksourceview/stable/lang-tutorial.html
+
+
+ Author: Mateusz Jończyk
+ Copyright (C) 2015 Mateusz Jończyk
+
+ GtkSourceView is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+
+ GtkSourceView is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+-->
+<language id="notatka" name="Notatka" version="2.0" _section="Other">
+  <metadata>
+    <property name="globs">*.txt</property>
+
+    <!-- Copied from c.lang -->
+    <property name="line-comment-start">//</property>
+    <property name="block-comment-start">/*</property>
+    <property name="block-comment-end">*/</property>
+  </metadata>
+
+  <styles>
+    <!-- map-to="def:type" was inspired by Markdown -->
+    <style id="entry_header" _name="Header" map-to="def:type"/>
+    <style id="subentry_header" _name="Subentry Header" map-to="def:type"/>
+
+    <!-- borrowed from c.lang -->
+    <style id="keyword" _name="Keyword" map-to="def:keyword"/>
+  </styles>
+
+  <definitions>
+    <context id="entry_header" style-ref="entry_header">
+            <match>^(pon|wto|śro|czw|pią|sob|nie)\, \d+ (sty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru) 201\d\, \d\d:\d\d:\d\d (CEST|CET)</match>
+    </context>
+
+    <context id="subentry_header" style-ref="subentry_header">
+        <match>EDIT\: (pon|wto|śro|czw|pią|sob|nie)\, \d+ (sty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru) 201\d\, \d\d:\d\d:\d\d (CEST|CET)</match>
+    </context>
+
+    <!-- based on c.lang -->
+    <context id="keywords" style-ref="keyword">
+      <keyword>IMPORTANT</keyword>
+      <keyword>ISTOTNE</keyword>
+      <keyword>WAŻNE</keyword>
+      <keyword>WAZNE</keyword>
+    </context>
+
+    <context id="notatka">
+      <include>
+        <context ref="entry_header"/>
+        <context ref="subentry_header"/>
+        <context ref="keywords"/>
+      </include>
+    </context>
+  </definitions>
+</language>

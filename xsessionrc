@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#This file is sourced from /etc/X11/Xsession.d/40x11-common_xsessionrc 
+#at startup. It can be used to set environment variables for all applications.
+
+#See: https://wiki.ubuntu.com/X/Config/SessionStartup
+

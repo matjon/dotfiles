@@ -13,9 +13,9 @@ syn match Todo 'ISTOTNE'
 syn match Todo 'WAŻNE'
 syn match Todo 'WAZNE'
 
-syn match Constant '\v\# .+'
-syn match Constant '\v\#\# .+'
-syn match Constant '\v\#\#\#+ .+'
+syn match Constant '\v^\# .+'
+syn match Constant '\v^\#\# .+'
+syn match Constant '\v^\#\#\#+ .+'
 
 syn match Constant '\v^\!\!\!.+'
 

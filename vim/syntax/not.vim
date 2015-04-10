@@ -17,6 +17,8 @@ syn match Constant '\v\# .+'
 syn match Constant '\v\#\# .+'
 syn match Constant '\v\#\#\#+ .+'
 
+syn match Constant '\v^\!\!\!.+'
+
 " URLs
 " syn match Constant '\v<(http|https|ftp)\:\S*'
 " syn match Constant '\v<www\.\S*'

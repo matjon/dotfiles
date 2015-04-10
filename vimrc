@@ -625,6 +625,12 @@ endif
 "
 "
 " TODO (in the order of priority):
+"       https://github.com/jeaye/color_coded
+"               - "color_coded is a vim plugin that provides realtime (fast),
+"               tagless code highlighting for C++, C, and Objective C using
+"               libclang."
+"
+"
 "       - http://peterodding.com/code/vim/notes
 "               - a really nice plugin for managing notes
 "       - http://peterodding.com/code/vim/easytags

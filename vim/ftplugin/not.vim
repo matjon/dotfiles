@@ -12,7 +12,7 @@
 "     autocmd FileType text setlocal textwidth=78              
 "
 
-setlocal textwidth=78
+setlocal textwidth=80
 setlocal nospell
 setlocal nonumber
 setlocal colorcolumn=0

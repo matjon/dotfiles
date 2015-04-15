@@ -1,7 +1,6 @@
 " Vim syntax file
-" Language: Moje notatki
-" Maintainer: Mateusz
-" Latest Revision: 17 X 2014
+" Language: My notes
+" Maintainer: Mateusz Jończyk
 
 " TODO: use custom match names instead of standard ones
 

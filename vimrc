@@ -62,7 +62,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 " Nerdtree as a panel
 
 Plugin 'freitass/todo.txt-vim'
-" simple TODO lists
+" simple to-do lists
 
 if g:main_config
         Plugin 'vim-scripts/a.vim'
@@ -627,6 +627,10 @@ endif
 "
 "
 " TODO (in the order of priority):
+"       Import more things from vim-outliner (or other outliner tools)
+"       https://github.com/vimoutliner/vimoutliner/blob/master/doc/votl.txt
+"
+"
 "       https://github.com/jeaye/color_coded
 "               - "color_coded is a vim plugin that provides realtime (fast),
 "               tagless code highlighting for C++, C, and Objective C using

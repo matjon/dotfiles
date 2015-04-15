@@ -630,6 +630,9 @@ endif
 "       Import more things from vim-outliner (or other outliner tools)
 "       https://github.com/vimoutliner/vimoutliner/blob/master/doc/votl.txt
 "
+"       http://naperwrimo.org/wiki/index.php?title=Vim_for_Writers
+"               - some nice tips on use of Vim
+"
 "
 "       https://github.com/jeaye/color_coded
 "               - "color_coded is a vim plugin that provides realtime (fast),

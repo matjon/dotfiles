@@ -31,5 +31,11 @@ setlocal noexpandtab
 "       setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
 setlocal comments=s1:/*,mb:*,ex:*/,://,n:>,fb:-
 
+" TODO
+let b:undo_ftplugin = ''
+" support for folding markdown-style headers
+" from plugin vim-markdown-folding
+runtime ftplugin/markdown/folding.vim
+
 " autocmd CursorHoldI * silent wall
 " autocmd CursorHold * silent wall

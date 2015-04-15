@@ -91,6 +91,9 @@ Plugin 'leshill/vim-json'
 " We set pinned=1 to get last stable version
 Plugin 'chrisbra/Recover.vim', {'pinned': 1}
 
+" 'Fold markdown documents by section'
+Plugin 'nelstrom/vim-markdown-folding'
+
 
 " 'This plugin attempts to solve the issue of quitting a window, and then
 " realizing you actually need it moments later. It simply lets you "undo" the

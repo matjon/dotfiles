@@ -417,6 +417,7 @@ set spelllang=en_us,pl
         " imap <F3> <Esc>:A<CR>
         map gn :make<CR>
 
+
         " czasami zamiast zapisania pliku przez pomyłkę wykonuję kompilację
         autocmd BufRead COMMIT_EDITMSG map gn ZZ
 
@@ -438,6 +439,10 @@ set spelllang=en_us,pl
         map gf :tabedit <cfile><CR>
 
         nmap gq gqap
+
+
+        " space to fold/unfold
+        nnoremap <Space> za 
 " }
 
 

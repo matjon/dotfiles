@@ -11,6 +11,8 @@ syn match Todo 'IMPORTANT'
 syn match Todo 'ISTOTNE'
 syn match Todo 'WAŻNE'
 syn match Todo 'WAZNE'
+syn match Todo 'READ_IN_A_YEAR'
+syn match Todo 'PRZECZYTAC_ZA_ROK'
 
 syn match Constant '\v^\# .+'
 syn match Constant '\v^\#\# .+'

@@ -40,5 +40,10 @@ let b:undo_ftplugin = ''
 let g:markdown_fold_style = 'nested'
 runtime ftplugin/markdown/folding.vim
 
+" Unfortunately the above script makes editing really slow, so disable it by
+" now. It can be enabled by doing 
+"       :set foldmethod=expr
+set foldmethod=manual
+
 " autocmd CursorHoldI * silent wall
 " autocmd CursorHold * silent wall

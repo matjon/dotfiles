@@ -562,6 +562,8 @@ endif
                substitute/\V\\u0179/Ź/e
                substitute/\V\\u017b/Ż/e
 
+
+               substitute/\V\\u2019/’/e
                substitute/\V\\"/"/e
 
                " newline

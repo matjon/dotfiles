@@ -106,6 +106,9 @@ Plugin 'nelstrom/vim-markdown-folding'
 " A nice color scheme
 Plugin 'altercation/vim-colors-solarized'
 
+" Use git from vim 
+Plugin 'tpope/vim-fugitive'
+
 call vundle#end()
 
 " autocomplpop          - automatic word completion

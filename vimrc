@@ -103,6 +103,9 @@ Plugin 'nelstrom/vim-markdown-folding'
 " Plugin 'AndrewRadev/undoquit.vim'
 
 
+" A nice color scheme
+Plugin 'altercation/vim-colors-solarized'
+
 call vundle#end()
 
 " autocomplpop          - automatic word completion
@@ -386,6 +389,10 @@ set clipboard=unnamed
 
 set title
 
+" let g:solarized_contrast='high'
+let g:solarized_termcolors=256
+colorscheme solarized
+"można to wyłączyć poprzez ':colorscheme default'
 
 
 

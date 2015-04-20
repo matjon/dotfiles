@@ -394,7 +394,7 @@ set title
 
 " let g:solarized_contrast='high'
 let g:solarized_termcolors=256
-colorscheme solarized
+" colorscheme solarized
 "można to wyłączyć poprzez ':colorscheme default'
 
 

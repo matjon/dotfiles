@@ -28,8 +28,7 @@ fi
 # set PATH so it includes user's private bin if it exists
 #if [ -d "$HOME/bin" ] ; then
 #fi
-PATH="/media/Vista/bin/bin:$HOME/bin:$PATH"
-LD_LIBRARY_PATH=/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:/media/Vista/bin/lib
+export PATH="$HOME/dotfiles/bin:$HOME/dotfiles/private/bin:$PATH"
 
 export LARCH_PATH=~/bin/splint-3.1.1/lib
 export LCLIMPORTDIR=~/bin/splint-3.1.1/imports

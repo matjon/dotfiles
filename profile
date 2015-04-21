@@ -29,7 +29,3 @@ fi
 #if [ -d "$HOME/bin" ] ; then
 #fi
 export PATH="$HOME/dotfiles/bin:$HOME/dotfiles/private/bin:$PATH"
-
-export LARCH_PATH=~/bin/splint-3.1.1/lib
-export LCLIMPORTDIR=~/bin/splint-3.1.1/imports
-export TCL_LIBRARY=/usr/share/tcltk/tcl8.5

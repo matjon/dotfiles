@@ -47,7 +47,7 @@ shopt -s cdspell
         #http://clang.llvm.org/docs/AddressSanitizer.html#introduction
         export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.4
 
-        export PATH="$HOME/bin:$PATH"
+        export PATH="$HOME/dotfiles/bin:$HOME/dotfiles/private/bin:$HOME/bin:$PATH"
         export PATH="/media/Vista/bin/bin:$PATH"
         export PATH="/media/ext1T-home/obszar_roboczy/texlive/bin/i386-linux:$PATH"
         export PATH="/media/Vista/install/sleuthkit/bin:$PATH"

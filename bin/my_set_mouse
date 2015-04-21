@@ -1,0 +1,12 @@
+#!/bin/bash
+
+xinput --set-ptr-feedback ' USB OPTICAL MOUSE' 0 12 10
+xinput --set-ptr-feedback 'A4Tech USB Optical Mouse' 0 14 10
+#http://www.x.org/wiki/Development/Documentation/PointerAcceleration/
+if [[ $1 == 'r' ]]; then
+	xinput --set-button-map 'A4Tech USB Optical Mouse' 1 2 3 4 5 6 7 1 1
+else
+	xinput --set-button-map 'A4Tech USB Optical Mouse' 3 2 1 4 5 6 7 1 1
+fi
+
+xinput set-button-map 'SynPS/2 Synaptics TouchPad'  0 1 1

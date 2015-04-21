@@ -1,0 +1,28 @@
+#!/bin/bash
+
+my_date=$(date "+%Y_%m_%d_%H-%M-%S")
+
+function save_smart()
+{
+        # $1 - HDD id
+        # $2 - dir to store data
+        
+        echo Smart results for $1:
+
+        [[ -e $1 ]] || return 1
+
+        cd "$2"
+        oldest=$(ls 2015* -1 | tail --lines=1)
+
+        udisks --ata-smart-refresh $1 > "$my_date"
+        diff "$oldest" "$my_date"
+}
+
+save_smart /dev/sda /home/mateusz/Modyfikacje/Sprzęt/Laptop/HDD/smart_data/
+
+echo
+echo
+echo
+
+save_smart /dev/disk/by-id/ata-TOSHIBA_MQ01UBD100_8492TVRBT  \
+        /home/mateusz/Modyfikacje/Sprzęt/Laptop/HDD/dysk_zewnetrzny_1T/

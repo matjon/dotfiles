@@ -1,4 +1,4 @@
-To install:
+## To install:
 
         git clone
         cd vim
@@ -37,5 +37,11 @@ Then:
 
 File vim/spell/pl.utf-8.spl was generated from /usr/share/dict/polish - package
 wpolish. For license see
-http://changelogs.ubuntu.com/changelogs/pool/main/i/ipolish/ipolish_20130519-1/copyright
+`http://changelogs.ubuntu.com/changelogs/pool/main/i/ipolish/ipolish_20130519-1/copyright`
 
+
+## Details about config files
+
+- `man bash`
+- http://superuser.com/a/789499
+- https://help.ubuntu.com/community/EnvironmentVariables - section "Persistent environment variables"

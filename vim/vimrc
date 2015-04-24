@@ -162,13 +162,10 @@ endif
 
 
 
-" ------------------------------------------------------------------------------
-" |                                                                            |
-" |                  Settings based from natural.vim                           |
-" |      We keep it in one block so that diff will work correctly              |
-" |                                                                            |
-" {{{
-
+" Settings based on natural.vim -------------------------------------------{{{
+" https://github.com/hkjels/natural.vim
+" We keep it in one block so that diff will work correctly
+"
 
 if has('autocmd')
   filetype plugin indent on
@@ -309,8 +306,6 @@ endif
 
 " |                                                                            |
 " | }}}              End of settings based on natural.vim                      |
-" |                                                                            |
-" ------------------------------------------------------------------------------
 
 
 
@@ -440,16 +435,7 @@ endif
         map <F6> :set invwrap<CR>
 " }}}
 
-
-
-
-
-
-
-
-" ----------------------------------------------------------------------------
-" PLUGIN SUPPORT {{{
-" ----------------------------------------------------------------------------
+" PLUGIN CONFIG -----------------------------------------------------------{{{
 
 " AutoComplPop ------------------------------------------------------------{{{
 
@@ -598,8 +584,6 @@ endif
 " }}}
 
 " }}}
-
-
 
 " TODO --------------------------------------------------------------------{{{
 

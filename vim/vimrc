@@ -41,6 +41,7 @@ else
   let g:main_config=0
 endif
 
+" Vundle - plugin list ----------------------------------------------------{{{
 set nocompatible
 
 " required for Vundle
@@ -111,7 +112,7 @@ Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
-
+" }}}
 
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -341,6 +342,7 @@ endif
 
 " }}}
 
+" Various -----------------------------------------------------------------{{{
 
 " Strip whitespace at the end of line
 " http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
@@ -381,6 +383,12 @@ set spelllang=en_us,pl
 autocmd BufRead COMMIT_EDITMSG goto 1
 autocmd BufRead COMMIT_EDITMSG startinsert
 
+if main_config == 0
+        autocmd CursorHoldI * silent wall
+        autocmd CursorHold * silent wall
+endif
+
+" }}}
 
 " KEYBOARD SHORTCUTS  -----------------------------------------------------{{{
 
@@ -591,10 +599,7 @@ endif
 
 " }}}
 
-if main_config == 0
-        autocmd CursorHoldI * silent wall
-        autocmd CursorHold * silent wall
-endif
+
 
 
 " Interesting dotfiles:

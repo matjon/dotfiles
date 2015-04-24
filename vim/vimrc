@@ -22,6 +22,11 @@ else
   let g:main_config=0
 endif
 
+
+" Import default settings from /usr/share/vim/vimcurrent/debian.vim
+runtime! debian.vim
+set modeline
+
 " Vundle - plugin list ----------------------------------------------------{{{
 set nocompatible
 

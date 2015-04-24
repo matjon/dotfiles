@@ -166,6 +166,7 @@ endif
 " |                  Settings based from natural.vim                           |
 " |      We keep it in one block so that diff will work correctly              |
 " |                                                                            |
+" {{{
 
 
 if has('autocmd')
@@ -306,7 +307,7 @@ endif
 
 
 " |                                                                            |
-" |                  End of settings based on natural.vim                      |
+" | }}}              End of settings based on natural.vim                      |
 " |                                                                            |
 " ------------------------------------------------------------------------------
 
@@ -319,7 +320,7 @@ endif
 
 
 
-" HANDLING OF STRUCTURED FILES ------------------------------------------{
+" HANDLING OF STRUCTURED FILES ------------------------------------------{{{
 
         set expandtab
         "set cinoptions+={2
@@ -338,7 +339,7 @@ endif
 
         set formatoptions=tcroql
 
-" }
+" }}}
 
 
 " Strip whitespace at the end of line
@@ -381,7 +382,7 @@ autocmd BufRead COMMIT_EDITMSG goto 1
 autocmd BufRead COMMIT_EDITMSG startinsert
 
 
-" KEYBOARD SHORTCUTS  -----------------------------------------------------{
+" KEYBOARD SHORTCUTS  -----------------------------------------------------{{{
 
         " http://www.cs.oberlin.edu/~kuperman/help/vim/indenting.html
         set pastetoggle=<F5>
@@ -429,7 +430,7 @@ autocmd BufRead COMMIT_EDITMSG startinsert
         nnoremap <Space> za 
 
         map <F6> :set invwrap<CR>
-" }
+" }}}
 
 
 
@@ -439,19 +440,18 @@ autocmd BufRead COMMIT_EDITMSG startinsert
 
 
 " ----------------------------------------------------------------------------
-" PLUGIN SUPPORT
+" PLUGIN SUPPORT {{{
 " ----------------------------------------------------------------------------
 
-
-" AutoComplPop --------------------------------------------------------{
+" AutoComplPop ------------------------------------------------------------{{{
 
         " do not treat a hyphen as a word break.
         " This is very helpful when using filenames containing hyphens
         set iskeyword+=-
 
-" }
+" }}}
 
-" NERDTree support ----------------------------------------------------{
+" NERDTree support --------------------------------------------------------{{{
 
         map <C-H> <C-W>h
         map <C-J> <C-W>j
@@ -476,13 +476,9 @@ autocmd BufRead COMMIT_EDITMSG startinsert
         set laststatus=0
         " let  NERDTreeMapOpenInTab = '<CR>'
 
-" }
+" }}}
 
-
-
-
-
-" VIM-AIRLINE CONFIG --------------------------------------------------------{
+" VIM-AIRLINE CONFIG ------------------------------------------------------{{{
 
 if main_config
         " based on some sample config from vim-airline
@@ -506,17 +502,16 @@ if main_config
         let g:airline_symbols.whitespace = 'Ξ'
 endif
 
-" }
+" }}}
 
-" LanguageTool CONFIG -----------------------------------------------------{
+" LanguageTool CONFIG -----------------------------------------------------{{{
 if main_config
         let g:languagetool_jar = '~/.vim/LanguageTool-2.8/languagetool-commandline.jar'
         let g:languagetool_lang = 'pl'
 endif
-" }
+" }}}
 
-
-" JSON specific settings --------------------------------------------------{
+" JSON specific settings --------------------------------------------------{{{
        
         " after execution of this command all line endings are in "mac" style
         command! JsonPrettyPrint :%! python -m json.tool
@@ -557,9 +552,9 @@ endif
         endfunction
 
         command! JsonDecodePL :call JsonDecodePL()
-" }
+" }}}
 
-" Session save ------------------------------------------------------------{
+" Session save ------------------------------------------------------------{{{
 
         "set sessionoptions=blank,buffers,curdir,folds,help,options,tabpages,winsize
         set sessionoptions=blank,curdir,help,tabpages
@@ -592,13 +587,15 @@ endif
         " correctly with NERDTreeTabs
         
         " autocmd BufEnter SaveSession
-" }
+" }}}
 
+" }}}
 
 if main_config == 0
         autocmd CursorHoldI * silent wall
         autocmd CursorHold * silent wall
 endif
+
 
 " Interesting dotfiles:
 "       - https://github.com/rht/eigenvimrc
@@ -680,3 +677,5 @@ endif
 "               opcja pokazywania różnicy przy odzyskiwaniu plików,
 "               - trzeba sprawdzić na ile to jest bezpieczne,
 
+
+" vim: foldmethod=marker

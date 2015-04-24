@@ -377,6 +377,9 @@ set spelllang=en_us,pl
 "        :mkspel pl /usr/share/dict/polish
 
 
+autocmd BufRead COMMIT_EDITMSG goto 1
+autocmd BufRead COMMIT_EDITMSG startinsert
+
 
 " KEYBOARD SHORTCUTS  -----------------------------------------------------{
 
@@ -677,5 +680,3 @@ endif
 "               opcja pokazywania różnicy przy odzyskiwaniu plików,
 "               - trzeba sprawdzić na ile to jest bezpieczne,
 
-autocmd BufRead COMMIT_EDITMSG goto 1
-autocmd BufRead COMMIT_EDITMSG startinsert

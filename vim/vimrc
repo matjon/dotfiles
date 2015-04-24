@@ -601,6 +601,7 @@ endif
 
 
 
+" TODO --------------------------------------------------------------------{{{
 
 " Interesting dotfiles:
 "       - https://github.com/rht/eigenvimrc
@@ -682,5 +683,6 @@ endif
 "               opcja pokazywania różnicy przy odzyskiwaniu plików,
 "               - trzeba sprawdzić na ile to jest bezpieczne,
 
+" }}}
 
 " vim: foldmethod=marker

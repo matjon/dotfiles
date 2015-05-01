@@ -106,6 +106,12 @@ shopt -s cdspell
 
 # }}}
 
+# OPTIONS {{{
+
+
+
+# }}}
+
 # TERMINAL TITLE {{{
         # If this is an xterm set the title to user@host:dir
         case "$TERM" in
@@ -136,17 +142,13 @@ shopt -s cdspell
         alias zzzzzz=exit
         alias zzzzzzz=exit
 
-        #http://www.drbunsen.org/vim-croquet/
-        #alias vim='vim -w ~/.vimlog "$@"'
-
         #it is annoying when I type "FAHClient" instead of "FAHControl"
         alias FAHClient='sl'
 
         # make less more friendly for non-text input files, see lesspipe(1)
         [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-
-#inspired by: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh
+        #inspired by: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh
         alias gc='git commit --verbose'
         alias gca='git commit --all --verbose'
         alias gs='git status'
@@ -223,7 +225,6 @@ shopt -s cdspell
 # }}}
 
 
-. ~/dotfiles/private/bashrc || true
 
 
 # HISTORY CONFIGURATION {{{
@@ -239,9 +240,9 @@ shopt -s cdspell
 # }}}
 
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
+. ~/dotfiles/private/bashrc || true
+
+
 #Disabling this makes execution of .bashrc blazing fast.
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion

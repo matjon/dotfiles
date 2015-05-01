@@ -1,18 +1,11 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 #this file is based on /etc/skel/.bashrc
-#TODO: see /etc/bash*  , /etc/profile
-#TODO: see /usr/share/doc/bash/examples
-#TODO: read other shopt options to see if they make sense
-#TODO: http://www.thegeekstuff.com/tag/productivity-tips-for-geeks/
-#TODO: http://www.thegeekstuff.com/2008/10/6-awesome-linux-cd-command-hacks-productivity-tip3-for-geeks/#more-233
 
-#if [[ $(tty | grep /dev/tty) ]]; then
-#	exit;
-#fi
-
+#TODO: 
+#       see /etc/bash*  , /etc/profile
+#       see /usr/share/doc/bash/examples
+#       read other shopt options to see if they make sense
+#       http://www.thegeekstuff.com/tag/productivity-tips-for-geeks/
+#       http://www.thegeekstuff.com/2008/10/6-awesome-linux-cd-command-hacks-productivity-tip3-for-geeks/#more-233
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -25,12 +18,6 @@ shopt -s checkwinsize
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
-
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
 
 
 
@@ -285,3 +272,5 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# vim: foldmethod=marker

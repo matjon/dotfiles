@@ -25,12 +25,6 @@ shopt -s checkwinsize
 shopt -s cdspell
 
 # ENVIRONMENT VARIABLES {{{
-        #export LARCH_PATH=~/bin/splint-3.1.1/lib
-        #export LCLIMPORTDIR=~/bin/splint-3.1.1/imports
-        #export TCL_LIBRARY=/usr/share/tcltk/tcl8.5
-
-        #export PATH=$PATH:$HOME/bin/android/platform-tools:$HOME/bin/android/tools:$HOME/bin/android-ndk-r5c
-
         #http://clang.llvm.org/docs/AddressSanitizer.html#introduction
         export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.4
 
@@ -42,8 +36,6 @@ shopt -s cdspell
         export LD_LIBRARY_PATH=/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:$LD_LIBRARY_PATH
         export LD_LIBRARY_PATH="/media/Vista/install/sleuthkit/lib:$LD_LIBRARY_PATH"
 
-        #export DERBY_INSTALL=/home/mateusz/Studia/IOR/lib/db-derby-10.10.1.1-bin
-        #export DERBY_HOME=$DERBY_INSTALL
 
         #ignore case, useful for git
         export LESS="-I -R --long-prompt"
@@ -235,22 +227,6 @@ shopt -s cdspell
 
 
 # HISTORY CONFIGURATION {{{
-##### OLD HISTORY CONFIGURATION 
-# handle history file gracefully for multiple windows open
-#http://en.flossmanuals.net/command-line/ch019_command-history/
-#shopt -s histappend
-##export PROMPT_COMMAND='history -a; history -n'      #was disabled in the old config
-#export PROMPT_COMMAND='history -a'
-
-# 'normal' history stuff
-#HISTFILESIZE=10000000
-#HISTSIZE=10000000
-#HISTTIMEFORMAT="%F %T "
-#HISTCONTROL=
-#export HISTFILESIZE
-#export HISTSIZE
-#export HISTTIMEFORMAT
-#export HISTCONTROL
 
 #http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows#3055135
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries

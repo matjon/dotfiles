@@ -24,7 +24,7 @@ shopt -s checkwinsize
 #it is safe because it is only used in interactive mode
 shopt -s cdspell
 
-# ENVIRONMENT VARIABLES {
+# ENVIRONMENT VARIABLES {{{
         #export LARCH_PATH=~/bin/splint-3.1.1/lib
         #export LCLIMPORTDIR=~/bin/splint-3.1.1/imports
         #export TCL_LIBRARY=/usr/share/tcltk/tcl8.5
@@ -56,9 +56,9 @@ shopt -s cdspell
         export AFFLIB_CACHE_PAGES=8
 
         unset ftp_proxy
-# }
+# }}}
 
-# COLOR SUPPORT {
+# COLOR SUPPORT {{{
 
         #Based on http://fedoraproject.org/wiki/Features/256_Color_Terminals
 
@@ -112,9 +112,9 @@ shopt -s cdspell
             alias egrep='egrep --color=auto'
         fi
 
-# } //END OF COLOR SUPPORT
+# }}}
 
-# TERMINAL TITLE {
+# TERMINAL TITLE {{{
         # If this is an xterm set the title to user@host:dir
         case "$TERM" in
         xterm*|rxvt*)
@@ -124,9 +124,9 @@ shopt -s cdspell
         *)
             ;;
         esac
-# }
+# }}}
 
-# ALIASES {
+# ALIASES {{{
 
         # some more ls aliases
         alias ll='ls -alF'
@@ -169,9 +169,9 @@ shopt -s cdspell
         alias glo='git log --online'
 
 
-# }
+# }}}
 
-# FUNCTIONS {
+# FUNCTIONS {{{
 
         # "repeat" command.  Like:
         #
@@ -228,13 +228,13 @@ shopt -s cdspell
                 cd "$1"
         }
 
-# }
+# }}}
 
 
 . ~/dotfiles/private/bashrc || true
 
 
-# HISTORY CONFIGURATION
+# HISTORY CONFIGURATION {{{
 ##### OLD HISTORY CONFIGURATION 
 # handle history file gracefully for multiple windows open
 #http://en.flossmanuals.net/command-line/ch019_command-history/
@@ -262,7 +262,8 @@ shopt -s histappend                      # append to history, don't overwrite it
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-#______________________________END OF HISTORY CONFIGURATION
+
+# }}}
 
 
 # enable programmable completion features (you don't need to enable

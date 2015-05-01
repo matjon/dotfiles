@@ -227,18 +227,15 @@ shopt -s cdspell
 
 
 # HISTORY CONFIGURATION {{{
+        #http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows#3055135
+        export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+        export HISTSIZE=100000000                   # big big history
+        export HISTFILESIZE=100000000               # big big history
+        export HISTTIMEFORMAT="%F %T " #MY ADDITION
+        shopt -s histappend                      # append to history, don't overwrite it
 
-#http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows#3055135
-export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
-export HISTSIZE=100000000                   # big big history
-export HISTFILESIZE=100000000               # big big history
-export HISTTIMEFORMAT="%F %T " #MY ADDITION
-shopt -s histappend                      # append to history, don't overwrite it
-
-# Save and reload the history after each command finishes
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-
-
+        # Save and reload the history after each command finishes
+        export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # }}}
 
 

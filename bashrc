@@ -3,7 +3,7 @@
 #TODO: 
 #       see /etc/bash*  , /etc/profile
 #       see /usr/share/doc/bash/examples
-#       read other shopt options to see if they make sense
+#       check other shopt options to see if they make sense
 #       http://www.thegeekstuff.com/tag/productivity-tips-for-geeks/
 #       http://www.thegeekstuff.com/2008/10/6-awesome-linux-cd-command-hacks-productivity-tip3-for-geeks/#more-233
 
@@ -32,10 +32,6 @@
         #for wodim
         export CDR_DEVICE="/dev/dvd3"
 
-        #8*16 = 128MB cache
-        export AFFLIB_CACHE_PAGES=8
-
-        unset ftp_proxy
 # }}}
 
 # COLOR SUPPORT {{{
@@ -104,7 +100,6 @@
         alias ll='ls -alF'
         alias llt='ls -alF --sort=time'
         alias la='ls -A'
-        alias l='ls -CF'
 
         #tell bash to sleep
         alias ZZ=exit
@@ -117,6 +112,7 @@
         alias zzzzzzz=exit
 
         #it is annoying when I type "FAHClient" instead of "FAHControl"
+        #sl is a "steam locomotive"
         alias FAHClient='sl'
 
         #from /etc/skel/.bashrc
@@ -148,27 +144,27 @@
         #From /usr/share/doc/bash/examples/startup-files/Bash_aliases
         repeat ()
         { 
-            local count="$1" i;
-            shift;
-            for i in $(_seq 1 "$count");
-            do
-                eval "$@";
-            done
+                local count="$1" i;
+                shift;
+                for i in $(_seq 1 "$count");
+                do
+                        eval "$@";
+                done
         }
 
         # Subfunction needed by `repeat'.
         _seq ()
         { 
-            local lower upper output;
-            lower=$1 upper=$2;
+                local lower upper output;
+                lower=$1 upper=$2;
 
-            if [ $lower -ge $upper ]; then return; fi
-            while [ $lower -lt $upper ];
-            do
-                echo -n "$lower "
-                lower=$(($lower + 1))
-            done
-            echo "$lower"
+                if [ $lower -ge $upper ]; then return; fi
+                while [ $lower -lt $upper ];
+                do
+                        echo -n "$lower "
+                        lower=$(($lower + 1))
+                done
+                echo "$lower"
         }
 
 
@@ -221,7 +217,7 @@
 
 #Disabling this makes execution of .bashrc blazing fast.
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+        . /etc/bash_completion
 fi
 
 # vim: foldmethod=marker

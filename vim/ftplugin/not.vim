@@ -43,7 +43,7 @@ runtime ftplugin/markdown/folding.vim
 " Unfortunately the above script makes editing really slow, so disable it by
 " now. It can be enabled by doing 
 "       :set foldmethod=expr
-set foldmethod=manual
+setlocal foldmethod=manual
 
 " autocmd CursorHoldI * silent wall
 " autocmd CursorHold * silent wall

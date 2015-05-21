@@ -304,8 +304,11 @@ endif
 
 " }}}
 
-" HANDLING OF STRUCTURED FILES ------------------------------------------{{{
+" Handling of structured files --------------------------------------------{{{
 
+        " break lines on word boundary
+        set linebreak
+        
         set expandtab
         "set cinoptions+={2
 

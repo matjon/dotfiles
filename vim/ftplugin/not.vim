@@ -2,6 +2,8 @@
 " Language: My notes
 " Maintainer: Mateusz Jończyk
 
+" Options:
+"        g:markdown_fold_style - folding style (as used by vim-markdown-folding)
 
 " In default vimrc from Ubuntu, files with extension *.txt are detected as
 " plain text files (filetype=text). There is no support for syntax
@@ -37,7 +39,6 @@ setlocal comments=s1:/*,mb:*,ex:*/,://,n:>,fb:-
 
 " TODO: expand undo_ftplugin
 let b:undo_ftplugin = ''
-let g:markdown_fold_style = 'nested'
 runtime ftplugin/markdown/folding.vim
 
 " Unfortunately the above script makes editing really slow, so disable it by

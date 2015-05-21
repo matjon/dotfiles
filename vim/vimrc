@@ -426,7 +426,7 @@ endif
         map <F6> :set invwrap<CR>
 " }}}
 
-" PLUGIN CONFIG -----------------------------------------------------------{{{
+" Plugin and special filetype config --------------------------------------{{{
 
 " AutoComplPop ------------------------------------------------------------{{{
 
@@ -572,6 +572,11 @@ endif
         " correctly with NERDTreeTabs
         
         " autocmd BufEnter SaveSession
+" }}}
+
+" Notes and markdown ------------------------------------------------------{{{
+        let g:markdown_fold_style = 'nested'
+
 " }}}
 
 " }}}

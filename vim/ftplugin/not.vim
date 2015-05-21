@@ -19,9 +19,7 @@ setlocal nospell
 setlocal nonumber
 setlocal colorcolumn=0
 
-" I don't remember why I have been using it
-" I should check the settings below
-"
+" TODO: check the four settings below, I don't remember why I set them
 " They may have been copied from some other plugin or website.
 setlocal nosmartindent
 setlocal nosmarttab

@@ -358,6 +358,10 @@ let g:solarized_termcolors=256
 " colorscheme solarized
 
 
+" display partial lines
+" http://vim.1045645.n5.nabble.com/Any-way-to-make-vim-show-partial-lines-when-wrapping-td1177588.html
+set display=lastline,uhex
+
 
 set spelllang=en_us,pl
 " How to generate polish language spell file:

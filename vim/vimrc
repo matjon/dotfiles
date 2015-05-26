@@ -75,7 +75,7 @@ Plugin 'leshill/vim-json'
 Plugin 'chrisbra/Recover.vim', {'pinned': 1}
 
 " 'Fold markdown documents by section'
-Plugin 'nelstrom/vim-markdown-folding'
+Plugin 'nelstrom/vim-markdown-folding', {'pinned': 1}
 
 
 " 'This plugin attempts to solve the issue of quitting a window, and then

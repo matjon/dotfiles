@@ -83,7 +83,7 @@ Plugin 'nelstrom/vim-markdown-folding', {'pinned': 1}
 " quit, similar to the way you would restore a just-closed tab in your
 " browser.'
 " Unfortunately requires vim >= 7.4
-" Plugin 'AndrewRadev/undoquit.vim'
+Plugin 'AndrewRadev/undoquit.vim'
 
 
 " A nice color scheme

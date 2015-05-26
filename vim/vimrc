@@ -428,8 +428,6 @@ endif
         nnoremap <Space> za 
 
         map <F6> :set invwrap<CR>
-
-        map <F7> :NotReFold<CR>
 " }}}
 
 " Plugin and special filetype config --------------------------------------{{{

@@ -1,25 +1,26 @@
+My configuration files.
+
 ## To install:
 
-        git clone
+        git clone https://github.com/matjon/dotfiles
+        cd dotfiles
         cd vim
         mkdir bundle
         cd bundle
         git clone https://github.com/gmarik/Vundle.vim
 
-        #install Recover.vim manually to get last stable version
+        #we install Recover.vim manually to get last stable version
         git clone https://github.com/chrisbra/Recover.vim
         cd Recover.vim
-        #specify commit SHA1 of last "stable" version
+        #checkout last "stable" version
         git checkout e8bfc9f1d627c44c9eabadf88ac528bd0140408b
 
+        #optionally install LanguageTool:
         cd ../.. 
         #we are now in ./vim/
         wget https://languagetool.org/download/LanguageTool-2.8.zip
         unzip LanguageTool-2.8.zip
         rm LanguageTool-2.8.zip
-
-        mkdir -p ~/.local/share/gtksourceview-3.0/language-specs/
-        ln -s ~/dotfiles/gedit_syntax/notatka.lang  ~/.local/share/gtksourceview-3.0/language-specs/notatka.lang
 
 
 Then:
@@ -32,7 +33,12 @@ Then:
 
 - restart vim,
         
-- open `gedit`, go to Edit -> Preferences, tab "Fonts and colors" and add `gedit_syntax/my_classic.xml` as a custom color scheme.
+Optionally: install Gedit syntax highlighting files:
+
+        mkdir -p ~/.local/share/gtksourceview-3.0/language-specs/
+        ln -s ~/dotfiles/gedit_syntax/notatka.lang  ~/.local/share/gtksourceview-3.0/language-specs/notatka.lang
+
+Then open `gedit`, go to Edit -> Preferences, tab "Fonts and colors" and add `gedit_syntax/my_classic.xml` as a custom color scheme.
 
 
 File vim/spell/pl.utf-8.spl was generated from /usr/share/dict/polish - package

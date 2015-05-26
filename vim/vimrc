@@ -621,10 +621,15 @@ endif
 "               - some nice tips on use of Vim
 "
 "
-"       https://github.com/jeaye/color_coded
+"       - C/C++ code handling:
+"
+"               https://github.com/jeaye/color_coded
 "               - "color_coded is a vim plugin that provides realtime (fast),
 "               tagless code highlighting for C++, C, and Objective C using
 "               libclang."
+"
+"               https://github.com/Valloric/YouCompleteMe
+"                       - syntax completion for C/C++
 "
 "
 "       - http://peterodding.com/code/vim/notes

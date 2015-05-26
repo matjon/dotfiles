@@ -308,6 +308,13 @@ endif
 
         " break lines on word boundary
         set linebreak
+        try
+                " This is supported only on Vim 7.4.338 and newer
+                " See: http://stackoverflow.com/a/26015800
+                set breakindent
+        catch 
+        endtry
+
         
         set expandtab
         "set cinoptions+={2

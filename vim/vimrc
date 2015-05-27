@@ -335,6 +335,151 @@ endif
 
 " }}}
 
+" Tabline {{{
+
+
+" experimental, unfinished, based on example code in ':help setting-tabline'
+" to enable:
+"               :set tabline=%!MyTabLine()
+"               
+function! MyTabLine()
+
+        let maxWidth=MyTabLineWidth(999)
+
+        let maxFilenameWidth=999
+
+        if maxWidth > &columns
+                
+                let maxSafeFilenameWidth = MyTabSafeFilenameWidth()
+
+                let maxFilenameWidth = maxSafeFilenameWidth
+
+                " echom 'maxSafeFilenameWidth = ' . maxSafeFilenameWidth . ' = (&columns) / tabpagenr($) - 2 = ' . (&columns) . ' / ' . tabpagenr('$') . ' - 2'
+                " echom string(range(maxSafeFilenameWidth+1, maxSafeFilenameWidth+10))
+
+                for curMaxFilenameWidth in range(maxSafeFilenameWidth+1, maxSafeFilenameWidth+10)
+                        " echom 'Testing '. curMaxFilenameWidth
+
+                        let curWidth = MyTabLineWidth(curMaxFilenameWidth)
+
+                        " echom 'curWidth = ' . curWidth
+                        if curWidth <= &columns
+                                let maxFilenameWidth = curMaxFilenameWidth
+                        else
+                                break
+                        endif
+                endfor
+        endif
+
+        " echom 'maxFilenameWidth = ' . maxFilenameWidth
+
+        let s = ''
+        for i in range(tabpagenr('$'))
+                let s .= MyTabLabelExpression( i + 1, maxFilenameWidth)
+        endfor
+
+        " after the last tab fill with TabLineFill and reset tab page nr
+        let s .= '%#TabLineFill#%T'
+
+        " right-align the label to close the current tab page
+        if tabpagenr('$') > 1
+                let s .= '%=%#TabLine#%999XX'
+        endif
+
+        return s
+endfunction
+
+
+function! MyTabLineWidth(maxFilenameWidth)
+        let fullWidth=0
+        for i in range(tabpagenr('$'))
+                let fullWidth+=MyTabLabelWidth(i + 1, a:maxFilenameWidth)
+        endfor
+
+        " X mark at the end
+        let fullWidth+=1
+
+        return fullWidth
+endfunction
+
+
+
+" {{{ specification of a single tab entry
+
+function! MyTabName(n)
+        let buflist = tabpagebuflist(a:n)
+        let winnr = tabpagewinnr(a:n)
+
+        let name=bufname(buflist[winnr - 1])
+
+        if name == ''
+                let name='Empty'
+        endif
+
+        return name
+endfunction
+
+function! MyTabModified(n)
+        let buflist = tabpagebuflist(a:n)
+        for winnr in buflist
+                let modified=getbufvar(winnr, '&modified')
+                if modified == 1
+                        return 1
+                endif
+        endfor
+
+        return 0
+endfunction
+
+function! MyTabLabelExpression(n, maxFilenameWidth)
+        " select the highlighting
+        if a:n == tabpagenr()
+                let s = '%#TabLineSel#'
+        else
+                let s = '%#TabLine#'
+        endif
+
+        " set the tab page number (for mouse clicks)
+        let s .= '%' . (a:n) . 'T'
+        let s .= ' '
+
+        let maxFilenameWidth = a:maxFilenameWidth
+        if MyTabModified(a:n)
+                let s.= '+'
+                let maxFilenameWidth -= 1
+        endif
+
+        let label = MyTabName(a:n)
+        let label = strpart(label, 0, maxFilenameWidth)
+
+        let s .= label
+        let s .= ' '
+
+        return s
+endfunction
+
+function! MyTabLabelWidth(n, maxFilenameWidth)
+        let filenameWidth = strdisplaywidth(MyTabName(a:n))
+        if MyTabModified(a:n) == 1
+                let filenameWidth += 1
+        endif
+
+        if filenameWidth > a:maxFilenameWidth
+                let filenameWidth = a:maxFilenameWidth
+        endif
+
+        return filenameWidth + 2
+endfunction
+
+function! MyTabSafeFilenameWidth()
+        " this division will be always rounded downwards
+        let maxSafeFilenameWidth = (&columns) / tabpagenr('$') - 2
+endfunction
+
+" }}}
+
+" }}}
+
 " Various -----------------------------------------------------------------{{{
 
 " Strip whitespace at the end of line

@@ -580,7 +580,7 @@ endif
         " space to fold/unfold
         nnoremap <Space> za 
 
-        map <F6> :set invwrap<CR>
+        map <F6> :set invwrap<CR>:set wrap?<CR>
 " }}}
 
 " Plugin and special filetype config --------------------------------------{{{

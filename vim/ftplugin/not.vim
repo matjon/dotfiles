@@ -15,6 +15,9 @@
 "
 
 setlocal textwidth=0
+setlocal wrap
+setlocal linebreak
+
 setlocal nospell
 setlocal nonumber
 setlocal colorcolumn=0

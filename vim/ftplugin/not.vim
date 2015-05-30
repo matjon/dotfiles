@@ -42,7 +42,27 @@ setlocal comments=s1:/*,mb:*,ex:*/,://,n:>,fb:-
 " TODO: add own commands to undo_ftplugin
 let b:undo_ftplugin = ''
 runtime ftplugin/markdown/folding.vim
-setlocal foldmethod=expr
+
+" Unfortunately foldmethod=expr with the function from the sourced script
+" makes typing very slow, it seems that the function is executed after every
+" keystroke.
+"
+" So we update folds only when opening the file and when the user explicitly
+" requests it by executing :NotReFold.
+"
+" It can be enabled full-time by doing 
+"       :set foldmethod=expr
+normal zx
+setlocal foldmethod=manual
+
+function! NotReFold()
+        setlocal foldmethod=expr
+        normal zx
+        setlocal foldmethod=manual
+endf
+
+command! NotReFold :call NotReFold()
+
 
 
 " autocmd CursorHoldI * silent wall

@@ -731,6 +731,61 @@ endif
         " correctly with NERDTreeTabs
         
         " autocmd BufEnter SaveSession
+
+
+" function MyFixSessionRestore() ------------------------------------------{{{
+
+        function! MyFixSessionRestore()
+                for i in range(tabpagenr('$'))
+                        " tabs are numbered beginning with 1, for iterates from 0
+                        let tabpageNr = i+1
+
+                        let buflist = tabpagebuflist(tabpageNr)
+
+                        echom 'Buffers in tabpage nr' tabpageNr.':' string(buflist)
+
+                        if len(buflist) != 3
+                                continue
+                        endif
+
+                        let bufNames = [] 
+                        let bufModified = []
+
+                        for i in range(3)
+                                let bufNames += [bufname(buflist[i])]
+                                let bufModified += [getbufvar(buflist[i], '&modified')]
+                        endfor
+
+                        if (bufNames[0] == '') || (bufModified[0] != 0)
+                                continue
+                        endif
+
+                        if (bufNames[1] != '') || (bufModified[1] != 0)
+                                continue
+                        endif
+
+                        if !(bufNames[2] =~# '\vNERD_tree_[1-9]')
+                                continue
+                        endif
+
+                        " TODO:
+                        " When buffer with number (buflist[1]) has been erroneously
+                        " opened by vim-session, the name of all buffers with numbers
+                        " higher then (buflist[1]) are either an empty string or
+                        " 'NERD_tree_[1-9]'.
+                        "
+                        " We could check this.
+                        
+                        let bufferToCloseNr = buflist[1]
+                        echom 'Closing buffer' bufferToCloseNr
+                        execute 'bdelete' bufferToCloseNr
+
+                endfor
+        endfunction
+
+        command! MyFixSessionRestore :call MyFixSessionRestore()
+" }}}
+
 " }}}
 
 " Notes and markdown ------------------------------------------------------{{{

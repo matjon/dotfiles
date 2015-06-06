@@ -340,9 +340,11 @@ endif
 
 
 " experimental, unfinished, based on example code in ':help setting-tabline'
-" to enable:
-"               :set tabline=%!MyTabLine()
-"               
+" 
+" To enable, execute :MyTabLineEnable
+
+command! MyTabLineEnable :set tabline=%!MyTabLine()
+
 function! MyTabLine()
 
         let maxWidth=MyTabLineWidth(999)

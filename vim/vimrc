@@ -87,10 +87,10 @@ Plugin 'AndrewRadev/undoquit.vim'
 
 
 " A nice color scheme
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 
 " Use git from vim 
-Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 

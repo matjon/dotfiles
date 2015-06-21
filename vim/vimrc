@@ -38,10 +38,10 @@ Plugin 'xolox/vim-session'
 " Session management for vim
 
 " A file system browser
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 
 " Nerdtree as a panel
-Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'jistr/vim-nerdtree-tabs'
 
 " simple to-do lists
 " Plugin 'freitass/todo.txt-vim'

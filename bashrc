@@ -194,6 +194,11 @@
                 cd "$1"
         }
 
+        function my_unix_to_localtime()
+        {
+                date --date="@$1"
+        }
+
 # }}}
 
 

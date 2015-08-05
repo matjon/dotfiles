@@ -92,6 +92,9 @@ Plugin 'AndrewRadev/undoquit.vim'
 " Use git from vim 
 " Plugin 'tpope/vim-fugitive'
 
+Plugin 'mbbill/undotree'
+
+
 call vundle#end()
 
 " }}}
@@ -793,6 +796,10 @@ endif
 " Notes and markdown ------------------------------------------------------{{{
         let g:markdown_fold_style = 'nested'
 
+" }}}
+
+" Undotree ----------------------------------------------------------------{{{
+        let g:undotree_RelativeTimestamp = '0'
 " }}}
 
 " }}}

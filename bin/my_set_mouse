@@ -14,4 +14,6 @@ else
 	xinput --set-button-map 'A4Tech USB Optical Mouse' 3 2 1 6 7 4 5 1 1
 fi
 
-xinput set-button-map 'SynPS/2 Synaptics TouchPad'  0 1 1
+# left button of my touchpad is broken and sends bogus events
+#synclient ClickFinger1=2
+#xinput set-button-map 'SynPS/2 Synaptics TouchPad'  0 1 1

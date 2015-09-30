@@ -8,9 +8,11 @@ xinput --set-ptr-feedback 'A4Tech USB Optical Mouse' 0 14 10
 
 if [[ $1 == 'r' ]]; then
         dconf write /org/gnome/settings-daemon/peripherals/mouse/left-handed false
+        gconftool --type=bool --set /desktop/gnome/peripherals/mouse/left_handed false 
 	xinput --set-button-map 'A4Tech USB Optical Mouse' 1 2 3 6 7 4 5 1 1
 else
         dconf write /org/gnome/settings-daemon/peripherals/mouse/left-handed true
+        gconftool --type=bool --set /desktop/gnome/peripherals/mouse/left_handed true
 	xinput --set-button-map 'A4Tech USB Optical Mouse' 3 2 1 6 7 4 5 1 1
 fi
 

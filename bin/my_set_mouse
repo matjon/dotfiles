@@ -8,14 +8,18 @@ xinput --set-ptr-feedback 'A4Tech USB Mouse' 0 14 10            #A4Tech Glaser X
 #http://www.x.org/wiki/Development/Documentation/PointerAcceleration/
 
 if [[ $1 == 'r' ]]; then
+        #setting dconf affects values reported by xinput get-button-map, 
+        #updating gconftool does not do that
         dconf write /org/gnome/settings-daemon/peripherals/mouse/left-handed false
         gconftool --type=bool --set /desktop/gnome/peripherals/mouse/left_handed false 
 
         #main scrolling wheel is broken, switch scrolling wheels
+        sleep 1
 	xinput --set-button-map 'A4Tech USB Optical Mouse' 1 2 3 6 7 4 5 1 1
 else
         dconf write /org/gnome/settings-daemon/peripherals/mouse/left-handed true
         gconftool --type=bool --set /desktop/gnome/peripherals/mouse/left_handed true
+        sleep 1
 	xinput --set-button-map 'A4Tech USB Optical Mouse' 3 2 1 6 7 4 5 1 1
 fi
 

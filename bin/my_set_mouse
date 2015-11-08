@@ -25,7 +25,3 @@ fi
 
 # the touchpad buttons should be right-handed all the time
 xinput --set-button-map 'SynPS/2 Synaptics TouchPad' 1 2 3
-
-# left button of my touchpad is broken and sends bogus events
-#synclient ClickFinger1=2
-#xinput set-button-map 'SynPS/2 Synaptics TouchPad'  0 1 1

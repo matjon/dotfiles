@@ -2,13 +2,20 @@
 
 # set input device settings
 
+# ----------------------------------------------------------------------------
+# Acceleration
+# see: http://www.x.org/wiki/Development/Documentation/PointerAcceleration/
 xinput --set-ptr-feedback ' USB OPTICAL MOUSE' 0 12 10
 xinput --set-ptr-feedback 'A4Tech USB Optical Mouse' 0 14 10
 xinput --set-ptr-feedback 'A4Tech USB Mouse' 0 14 10            #A4Tech Glaser X6-10D
-#http://www.x.org/wiki/Development/Documentation/PointerAcceleration/
+
+
+# ----------------------------------------------------------------------------
+# Button mapping: left/right-handed
+# TODO: make it more robust
 
 if [[ $1 == 'r' ]]; then
-        #setting dconf affects values reported by xinput get-button-map, 
+        #setting dconf changes values reported by `xinput get-button-map` 
         #updating gconftool does not do that
         dconf write /org/gnome/settings-daemon/peripherals/mouse/left-handed false
         gconftool --type=bool --set /desktop/gnome/peripherals/mouse/left_handed false 

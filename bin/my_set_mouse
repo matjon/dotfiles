@@ -12,14 +12,15 @@ if [[ $1 == 'r' ]]; then
         #updating gconftool does not do that
         dconf write /org/gnome/settings-daemon/peripherals/mouse/left-handed false
         gconftool --type=bool --set /desktop/gnome/peripherals/mouse/left_handed false 
+        sleep 3
 
         #main scrolling wheel is broken, switch scrolling wheels
-        sleep 1
 	xinput --set-button-map 'A4Tech USB Optical Mouse' 1 2 3 6 7 4 5 1 1
 else
         dconf write /org/gnome/settings-daemon/peripherals/mouse/left-handed true
         gconftool --type=bool --set /desktop/gnome/peripherals/mouse/left_handed true
-        sleep 1
+        sleep 3
+
 	xinput --set-button-map 'A4Tech USB Optical Mouse' 3 2 1 6 7 4 5 1 1
 fi
 

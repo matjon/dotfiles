@@ -1,0 +1,5 @@
+
+.include /etc/pulse/default.pa
+
+# dostęp dla uż. hidden poprzez TCP (tak jest najprościej)
+load-module module-native-protocol-tcp port=1500 auth-cookie=/home/mateusz/.pulse/hidden-cookie

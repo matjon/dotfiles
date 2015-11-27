@@ -16,6 +16,7 @@
         #http://clang.llvm.org/docs/AddressSanitizer.html#introduction
         export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.4
 
+        export PATH="/home/mateusz/dotfiles/copied_executables/:$PATH"
         export PATH="/media/Vista/bin/bin:$PATH"
         export PATH="/home/mateusz/texlive/bin/i386-linux:$PATH"
         export PATH="/media/Vista/install/sleuthkit/bin:$PATH"

@@ -12,3 +12,4 @@ vim/spell/*.add.*
 
 old/
 private/
+copied_executables/

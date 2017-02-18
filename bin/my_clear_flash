@@ -3,7 +3,3 @@
 killall plugin-container
 rm -r ~/.macromedia
 rm -r ~/.adobe
-
-#EDIT: czw, 2 kwi 2015, 14:27:08 CEST
-cd
-tar -xvvf ~/dotfiles/private/macromedia.tar.gz

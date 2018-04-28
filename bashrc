@@ -23,6 +23,7 @@
         export PATH="/media/Vista/install/sleuthkit/bin:$PATH"
         export PATH="/media/Vista/install/jdk/jdk1.8.0_172/bin:$PATH"
         export PATH="/media/Vista/install/phantomjs/phantomjs-2.1.1-linux-i686/bin:$PATH"
+        export PATH="/media/Vista/install/sencha-cmd:$PATH"
 
         export LD_LIBRARY_PATH=/media/Vista/bin/lib:$LD_LIBRARY_PATH
         export LD_LIBRARY_PATH=/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:$LD_LIBRARY_PATH

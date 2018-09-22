@@ -215,6 +215,30 @@
                 date --date="@$1"
         }
 
+
+        # pią, 12 lut 2016, 17:22:27 CET
+        # http://ubuntuforums.org/showthread.php?t=899179
+        function odtgrep() { 
+                # styles.xml contains page header/footer text
+                unzip -p "$2" content.xml styles.xml 2>/dev/null | grep "$1" >/dev/null; 
+                if [ $? -eq 0 ]; then 
+                        echo "$2"
+                fi
+        }
+
+        function odtsearch() {
+                for f in *.odt; do 
+                        odtgrep "$1" "$f"
+                done 
+        }
+
+        function odtsearch_r() {
+                #HACK
+                for f in *.odt */*.odt */*/*.odt */*/*/*.odt */*/*/*/*.odt      \
+                                */*/*/*/*/*.odt */*/*/*/*/*/*.odt; do 
+                        odtgrep "$1" "$f"
+                done 
+        }
 # }}}
 
 

@@ -94,6 +94,10 @@ Plugin 'AndrewRadev/undoquit.vim'
 
 Plugin 'mbbill/undotree'
 
+" EDIT: śro, 8 mar 2017, 15:32:55 CET
+Plugin 'arecarn/vim-crunch'
+
+
 
 call vundle#end()
 
@@ -332,6 +336,9 @@ endif
 
         "autocmd BufNewFile,BufRead *.txt set wrap textwidth=0 wrapmargin=80
 
+        " Follow https://www.php-fig.org/psr/psr-2/
+        autocmd BufNewFile,BufRead *.php setlocal tabstop=8 softtabstop=4 shiftwidth=4 expandtab textwidth=80
+
         " line numbering
         set numberwidth=5
 
@@ -498,6 +505,8 @@ autocmd BufWritePre *.c :Stripws
 autocmd BufWritePre *.cpp :Stripws
 autocmd BufWritePre *.h :Stripws
 autocmd BufWritePre *.tex :Stripws
+" Follow https://www.php-fig.org/psr/psr-2/
+autocmd BufWritePre *.php :Stripws
 
 
 " http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
@@ -530,11 +539,30 @@ set spelllang=en_us,pl
 
 autocmd BufRead COMMIT_EDITMSG goto 1
 autocmd BufRead COMMIT_EDITMSG startinsert
+autocmd BufRead COMMIT_EDITMSG set filetype=gitcommit
 
 if main_config == 0
         autocmd CursorHoldI * silent wall
         autocmd CursorHold * silent wall
 endif
+
+" EDIT: sob, 28 sty 2017, 20:42:03 CET
+" set printfont=:h14
+
+
+" EDIT: nie, 7 maj 2017, 23:47:52 CEST
+" Drukowanie:
+set printencoding=cp1250
+set printfont=:h12
+" set printfont='Droid\ Sans\ Mono\ 12'
+
+" EDIT: wto, 9 maj 2017, 16:06:07 CEST
+" Sometimes vim hangs when the system is busy, this could fix it.
+" As is written in the manual:
+"       "On Unix the system does a sync now and then without Vim asking for it,
+"       so the disadvantage of setting this option off is small."
+set swapsync=
+
 
 " }}}
 
@@ -588,6 +616,13 @@ endif
         map <F6> :set invwrap<CR>:set wrap?<CR>
 
         map <F7> :NotReFold<CR>
+
+        " EDIT: czw, 9 lut 2017, 15:55:36 CET
+        nmap <F1> :echo<CR>
+        imap <F1> <C-o>:echo<CR>
+
+
+
 " }}}
 
 " Plugin and special filetype config --------------------------------------{{{
@@ -597,6 +632,7 @@ endif
         " do not treat a hyphen as a word break.
         " This is very helpful when using filenames containing hyphens
         set iskeyword+=-
+        let g:acp_enableAtStartup = 0
 
 " }}}
 

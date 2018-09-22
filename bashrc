@@ -1,6 +1,6 @@
 #this file is based on /etc/skel/.bashrc
 
-#TODO: 
+#TODO:
 #       see /etc/bash*  , /etc/profile
 #       see /usr/share/doc/bash/examples
 #       check other shopt options to see if they make sense
@@ -159,7 +159,7 @@
         #	repeat 10 echo foo
         #From /usr/share/doc/bash/examples/startup-files/Bash_aliases
         repeat ()
-        { 
+        {
                 local count="$1" i;
                 shift;
                 for i in $(_seq 1 "$count");
@@ -170,7 +170,7 @@
 
         # Subfunction needed by `repeat'.
         _seq ()
-        { 
+        {
                 local lower upper output;
                 lower=$1 upper=$2;
 
@@ -198,9 +198,9 @@
         }
 
         #compress
-        #function c() 
+        #function c()
         #{
-        #        tar -c -f "$1".tar.gz -a "$1" 
+        #        tar -c -f "$1".tar.gz -a "$1"
         #}
 
         #mkdir and cd to it
@@ -218,26 +218,26 @@
 
         # pią, 12 lut 2016, 17:22:27 CET
         # http://ubuntuforums.org/showthread.php?t=899179
-        function odtgrep() { 
+        function odtgrep() {
                 # styles.xml contains page header/footer text
-                unzip -p "$2" content.xml styles.xml 2>/dev/null | grep "$1" >/dev/null; 
-                if [ $? -eq 0 ]; then 
+                unzip -p "$2" content.xml styles.xml 2>/dev/null | grep "$1" >/dev/null;
+                if [ $? -eq 0 ]; then
                         echo "$2"
                 fi
         }
 
         function odtsearch() {
-                for f in *.odt; do 
+                for f in *.odt; do
                         odtgrep "$1" "$f"
-                done 
+                done
         }
 
         function odtsearch_r() {
                 #HACK
                 for f in *.odt */*.odt */*/*.odt */*/*/*.odt */*/*/*/*.odt      \
-                                */*/*/*/*/*.odt */*/*/*/*/*/*.odt; do 
+                                */*/*/*/*/*.odt */*/*/*/*/*/*.odt; do
                         odtgrep "$1" "$f"
-                done 
+                done
         }
 # }}}
 

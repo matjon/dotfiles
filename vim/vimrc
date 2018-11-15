@@ -339,6 +339,10 @@ endif
         " Follow https://www.php-fig.org/psr/psr-2/
         autocmd BufNewFile,BufRead *.php setlocal tabstop=8 softtabstop=4 shiftwidth=4 expandtab textwidth=80
 
+        " Similar coding conventions for Java
+        " I use the rules suggested by the Traccar project
+        autocmd BufNewFile,BufRead *.java setlocal tabstop=8 softtabstop=4 shiftwidth=4 expandtab textwidth=100
+
         " line numbering
         set numberwidth=5
 

@@ -31,11 +31,11 @@ else
 	xinput --set-button-map 'A4Tech USB Optical Mouse' 3 2 1 6 7 4 5 1 1
 fi
 
-# touchpad buttons should be right-handed all the time
-synclient ClickFinger1=1
+synclient ClickFinger1=3
 synclient ClickFinger2=0
 synclient ClickFinger3=0
-synclient TapButton1=1
+synclient TapButton1=3
 synclient TapButton2=0
 synclient TapButton3=0
-xinput --set-button-map 'SynPS/2 Synaptics TouchPad' 1 2 3
+#xinput --set-button-map 'SynPS/2 Synaptics TouchPad' 1 2 3
+xinput --set-button-map 'SynPS/2 Synaptics TouchPad' 3 2 1

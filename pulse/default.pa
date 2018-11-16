@@ -5,4 +5,4 @@
 load-module module-native-protocol-tcp port=1500 auth-cookie=/home/mateusz/.pulse/hidden-cookie
 
 # dźwięk z mikrofonu na słuchawki
-load-module module-loopback
+#load-module module-loopback

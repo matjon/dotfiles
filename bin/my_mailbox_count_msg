@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# TODO: dodać wsparcie dla liczenia większej liczby plików
+echo -n $1 ' '
+cat $1 | grep '^From ' | wc -l
+

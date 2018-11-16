@@ -5,6 +5,9 @@
 # Currently, there is a newsletter service available on
 #       https://www.tauron-dystrybucja.pl/wylaczenia
 # that seems to work so this script may be useless now.
+#
+# *** BEFORE USING A SIMILAR SCRIPT WITH YOUR POWER PROVIDER,  ***
+#           *** CHECK THE SITE'S TERMS OF SERVICE ***
 
 # My street name is defined in this file
 . ~/dotfiles/private/my_tauron_energy_check_data.conf

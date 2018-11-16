@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# A simple script to regularly check whether there is a scheduled power outage 
+# in my neighborhood.
+# Currently, there is a newsletter service available on
+#       https://www.tauron-dystrybucja.pl/wylaczenia
+# that seems to work so this script may be useless now.
+
+# My street name is defined in this file
+. ~/dotfiles/private/my_tauron_energy_check_data.conf
+
+file=/tmp/energy_blackout_info.html
+
+#I haven't found a way to force wget to retry all errors so have to handle this manually
+i=0
+while ! wget "$BLACKOUT_INFO_URL" -O "$file" --tries=1 && [[ $i -lt 10 ]]; do
+        sleep 60
+        echo $((i++))
+done
+
+cat "$file" | grep "$MY_ADDRESS_EXPR"
+
+if [[ $? == '0' ]]; then
+                # 10 * 10 minut = 100 minut = 1h 40 min
+        for (( i = 0; i < 10; i++ )); do
+                # jeśli $DISPLAY nie jest ustawione (np. przy wywoływaniu z anacrona), ustawiamy ":0"
+                #export DISPLAY=${DISPLAY:-:0}
+
+                # http://unix.stackexchange.com/questions/17255/is-there-a-command-to-list-all-open-displays-on-a-machine
+                export DISPLAY=$(cd /tmp/.X11-unix && for x in X*; do echo ":${x#X}"; done)
+
+                notify-send --urgency=critical "Energy blackout ahead!"
+                # TODO: wysyłanie do maila,
+                sleep 600
+        done
+fi

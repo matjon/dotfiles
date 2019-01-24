@@ -9,3 +9,10 @@ set-card-profile alsa_card.pci-0000_00_1b.0 output:analog-stereo+input:analog-st
 
 # dźwięk z mikrofonu na słuchawki
 #load-module module-loopback
+
+# equalizator - używany do ochrony prawego głośnika przed zużywaniem się
+# http://www.webupd8.org/2013/03/install-pulseaudio-with-built-in-system.html
+load-module module-equalizer-sink
+load-module module-dbus-protocol
+
+set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo.equalizer

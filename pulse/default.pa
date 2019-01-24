@@ -4,5 +4,8 @@
 # dostęp dla uż. hidden poprzez TCP (tak jest najprościej)
 load-module module-native-protocol-tcp port=1500 auth-cookie=/home/mateusz/.config/pulse/hidden-cookie
 
+set-card-profile alsa_card.pci-0000_00_1b.0 output:analog-stereo+input:analog-stereo
+#set-card-profile alsa_card.pci-0000_01_00.1 off
+
 # dźwięk z mikrofonu na słuchawki
 #load-module module-loopback

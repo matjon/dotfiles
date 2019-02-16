@@ -17,6 +17,7 @@
         export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.4
 
         export PATH="/home/mateusz/dotfiles/copied_executables/:$PATH"
+        export PATH="/home/mateusz/dotfiles/private/bin/:$PATH"
         export PATH="/media/Vista/install/nodejs/node-v8.11.1-linux-x86/bin:$PATH"
         export PATH="/media/Vista/bin/bin:$PATH"
         export PATH="/media/Vista/install/texlive/bin/i386-linux:$PATH"
@@ -56,6 +57,7 @@
         # off by default to not distract the user: the focus in a terminal window
         # should be on the output of commands, not on the prompt
         #color_prompt=yes
+
         if [ "$color_prompt" = yes ]; then
             PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
         else

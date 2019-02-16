@@ -24,6 +24,7 @@
         export PATH="/media/Vista/install/jdk/jdk-11.0.1/bin:$PATH"
         export PATH="/media/Vista/install/phantomjs/phantomjs-2.1.1-linux-i686/bin:$PATH"
         export PATH="/media/Vista/install/sencha-cmd:$PATH"
+        export PATH="/media/Vista/install/android/platform-tools:$PATH"
 
         export LD_LIBRARY_PATH=/media/Vista/bin/lib:$LD_LIBRARY_PATH
         export LD_LIBRARY_PATH=/media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/:$LD_LIBRARY_PATH
@@ -37,7 +38,6 @@
 
         #for wodim
         export CDR_DEVICE="/dev/dvd3"
-
 
         export SOX_OPTS="--rate 44100 --channels 2"
 # }}}

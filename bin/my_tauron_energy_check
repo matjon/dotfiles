@@ -24,8 +24,7 @@ done
 cat "$file" | grep "$MY_ADDRESS_EXPR"
 
 if [[ $? == '0' ]]; then
-                # 10 * 10 minut = 100 minut = 1h 40 min
-        for (( i = 0; i < 10; i++ )); do
+        for (( i = 0; i < 5; i++ )); do
                 # jeśli $DISPLAY nie jest ustawione (np. przy wywoływaniu z anacrona), ustawiamy ":0"
                 #export DISPLAY=${DISPLAY:-:0}
 

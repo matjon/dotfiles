@@ -13,9 +13,6 @@
 
 
 # ENVIRONMENT VARIABLES {{{
-        #http://clang.llvm.org/docs/AddressSanitizer.html#introduction
-        export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.4
-
         export PATH="/home/mateusz/dotfiles/copied_executables/:$PATH"
         export PATH="/home/mateusz/dotfiles/private/bin/:$PATH"
         export PATH="/media/Vista/install/nodejs/node-v8.11.1-linux-x86/bin:$PATH"

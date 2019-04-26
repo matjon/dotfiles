@@ -15,3 +15,7 @@ export MOZ_GLX_IGNORE_BLACKLIST=1
 
 #disable menu key
 xmodmap -e 'keycode 135 = NoSymbol'
+
+# wyłączenie niełamiącej spacji na Alt+Spacja
+# https://stackoverflow.com/questions/31383074/how-to-disable-non-breaking-space-with-altgrspace
+setxkbmap -option "nbsp:none"

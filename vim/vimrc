@@ -636,15 +636,6 @@ set swapsync=
 
 " Plugin and special filetype config --------------------------------------{{{
 
-" AutoComplPop ------------------------------------------------------------{{{
-
-        " do not treat a hyphen as a word break.
-        " This is very helpful when using filenames containing hyphens
-        set iskeyword+=-
-        let g:acp_enableAtStartup = 0
-
-" }}}
-
 " NERDTree support --------------------------------------------------------{{{
 
         map <C-H> <C-W>h

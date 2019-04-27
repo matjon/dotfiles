@@ -630,6 +630,9 @@ set swapsync=
         nmap <F1> :echo<CR>
         imap <F1> <C-o>:echo<CR>
 
+        " Show full file path
+        map <F8> 1<C-g>
+
 
 
 " }}}

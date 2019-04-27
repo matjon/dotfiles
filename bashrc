@@ -126,7 +126,7 @@
 
         #inspired by: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh
         alias gc='git commit --verbose'
-        alias gca='git commit --all --verbose'
+        alias gca='git commit --amend --verbose'
         alias gs='git status'
         alias gd='git diff'
         alias gds='git diff --staged'

@@ -52,9 +52,6 @@ if g:main_config
         " 'switch between source files and header files quickly.'
         Plugin 'vim-scripts/a.vim'
 
-        " 'automatically opens popup menu for completions'
-        Plugin 'vim-scripts/AutoComplPop'
-
         " Grammar checking
         Plugin 'vim-scripts/LanguageTool'
 

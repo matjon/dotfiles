@@ -34,6 +34,8 @@
 
         #for wodim
         export CDR_DEVICE="/dev/dvd3"
+        #buffer size: 64MiB,
+        export CDR_FIFOSIZE="64m"
 
         export SOX_OPTS="--rate 44100 --channels 1"
 # }}}

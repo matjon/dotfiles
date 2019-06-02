@@ -35,7 +35,7 @@
         #for wodim
         export CDR_DEVICE="/dev/dvd3"
 
-        export SOX_OPTS="--rate 44100 --channels 2"
+        export SOX_OPTS="--rate 44100 --channels 1"
 # }}}
 
 # COLOR SUPPORT {{{

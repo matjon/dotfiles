@@ -4,7 +4,17 @@
 #To enable execution of this file add
 #        add-auto-load-safe-path /media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/libstdc++.so.6.0.18-gdb.py
 #line to your configuration file "/home/mateusz/.gdbinit".
-add-auto-load-safe-path /media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/libstdc++.so.6.0.18-gdb.py
+
+#add-auto-load-safe-path /media/Vista/bin/lib/gcc/i686-pc-linux-gnu/4.8.2/libstdc++.so.6.0.18-gdb.py
+
+
+#EDIT: nie, 12 lut 2017, 01:01:43 CET
+python
+import sys
+sys.path.insert(0, "/media/Vista/build/kernel/linux/scripts/gdb")
+end
+source /media/Vista/build/kernel/linux/scripts/gdb/vmlinux-gdb.py
+#---
 
 set debug-file-directory /usr/lib/debug
 
@@ -30,3 +40,13 @@ end
 
 #Iterators: how to display the item the iterator points at 
 #(tested on gdb 6 with a list): print *(iter._M_current)
+
+
+
+
+
+#nie, 12 lut 2017, 01:06:19 CET
+set history save on
+#set history size unlimited
+#set history filename /home/mateusz/.gdbhistory
+

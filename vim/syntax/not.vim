@@ -21,5 +21,5 @@ syn match Constant '\v^\# .+'
 syn match Constant '\v^\#\# .+'
 syn match Constant '\v^\#\#\#+ .+'
 
-syn match Constant '\v^\!\!\!.+'
+syn match Constant '\v\!\!\!.+'
 

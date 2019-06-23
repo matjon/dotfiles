@@ -18,7 +18,7 @@ function save_smart()
         diff "$oldest" "$my_date"
 }
 
-save_smart /dev/sda /home/mateusz/Modyfikacje/Sprzęt/Laptop/HDD/smart_data/
+save_smart /dev/sda /home/mateusz/Modyfikacje/Sprzęt/Laptop/HDD/smart_data_500G/
 
 echo
 echo

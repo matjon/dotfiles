@@ -7,12 +7,6 @@
 
 #See: https://wiki.ubuntu.com/X/Config/SessionStartup
 
-
-# Enable Off-Main Thread Compositing in Firefox
-# See: http://www.phoronix.com/scan.php?page=article&item=firefox-features-state&num=2
-export MOZ_USE_OMTC=1
-export MOZ_GLX_IGNORE_BLACKLIST=1
-
 #disable menu key
 xmodmap -e 'keycode 135 = NoSymbol'
 

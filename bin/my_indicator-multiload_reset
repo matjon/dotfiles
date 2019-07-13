@@ -1,4 +1,8 @@
 #!/bin/bash
+# Somehow, a dconf preference is sometimes being set that causes
+# indicator-multiload to show some data as text next to the graphs.
+# This is annoying, create a script that resets this preference and
+# restarts indicator-multiload.
 
 dconf reset /de/mh21/indicator-multiload/general/indicator-expression-index 
 

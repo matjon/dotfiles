@@ -1,0 +1,6 @@
+#!/bin/bash
+
+dconf reset /de/mh21/indicator-multiload/general/indicator-expression-index 
+
+killall indicator-multiload
+nohup indicator-multiload >/dev/null 2>&1 &

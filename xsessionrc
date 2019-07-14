@@ -13,3 +13,7 @@ xmodmap -e 'keycode 135 = NoSymbol'
 # wyłączenie niełamiącej spacji na Alt+Spacja
 # https://stackoverflow.com/questions/31383074/how-to-disable-non-breaking-space-with-altgrspace
 setxkbmap -option "nbsp:none"
+
+xhost +SI:localuser:hidden
+xhost +SI:localuser:workrave_user
+xhost +SI:localuser:root

@@ -47,6 +47,8 @@ wpolish. For license see
 
     :mkspell! vim/spell/pl.utf-8.spl /usr/share/dict/polish
 
+Then add ~/dotfiles/rc.sh to the list of startup programs, for example in
+gnome-session-properties.
 
 ## Details about config files
 

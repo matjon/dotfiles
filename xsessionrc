@@ -14,6 +14,11 @@ xmodmap -e 'keycode 135 = NoSymbol'
 # https://stackoverflow.com/questions/31383074/how-to-disable-non-breaking-space-with-altgrspace
 setxkbmap -option "nbsp:none"
 
+# Enable mouse keys (moving the mouse cursor by pressing keys on the numpad):
+xkbset mousekeys
+# and set its speed - modified settings from https://askubuntu.com/a/499037
+xkbset mousekeysaccel 60 10 20 20 3
+
 xhost +SI:localuser:hidden
 xhost +SI:localuser:workrave_user
 xhost +SI:localuser:root

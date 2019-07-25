@@ -17,3 +17,7 @@ setxkbmap -option "nbsp:none"
 xhost +SI:localuser:hidden
 xhost +SI:localuser:workrave_user
 xhost +SI:localuser:root
+
+# Możliwość wybrania rozdzielczości 800x500 - przydatne przy graniu
+xrandr --newmode '800x500'   30.75  800 824 896 992  500 503 509 521 -hsync +vsync
+xrandr --addmode LVDS '800x500'

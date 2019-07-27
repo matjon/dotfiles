@@ -14,7 +14,7 @@ function save_smart()
         cd "$2"
         oldest=$(ls 20[1,2,3]* -1 --directory | tail --lines=1)
 
-        udisks --ata-smart-refresh $1 > "$my_date"
+        udisks --show-info $1 > "$my_date"
         diff "$oldest" "$my_date"
 }
 

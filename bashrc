@@ -236,9 +236,8 @@
         }
 
         function odtsearch_r() {
-                #HACK
-                for f in *.odt */*.odt */*/*.odt */*/*/*.odt */*/*/*/*.odt      \
-                                */*/*/*/*/*.odt */*/*/*/*/*/*.odt; do
+                export IFS=$'\n'
+                for f in $(find -iname \*.odt); do
                         odtgrep "$1" "$f"
                 done
         }

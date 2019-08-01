@@ -62,6 +62,8 @@ if g:main_config
         "       respect to Git
         "       - unfortunately, it is annoying
 
+        " Syntax highlighting for Twig template files
+        Plugin 'lumiliet/vim-twig'
 endif
 
 

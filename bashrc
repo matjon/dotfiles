@@ -16,7 +16,7 @@
         export PATH="/home/mateusz/dotfiles/bin/:$PATH"
         export PATH="/home/mateusz/dotfiles/copied_executables/:$PATH"
         export PATH="/home/mateusz/dotfiles/private/bin/:$PATH"
-        export PATH="/media/Vista/install/nodejs/node-v8.11.1-linux-x86/bin:$PATH"
+        export PATH="/media/Vista/install/nodejs/node-v10.16.2-linux-x64/bin:$PATH"
         export PATH="/media/Vista/bin/bin:$PATH"
         export PATH="/media/Vista/install/texlive/bin/i386-linux:$PATH"
         export PATH="/media/Vista/install/jdk/jdk-11.0.1/bin:$PATH"

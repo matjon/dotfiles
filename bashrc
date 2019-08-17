@@ -131,6 +131,7 @@
         alias gc='git commit --verbose'
         alias gca='git commit --amend --verbose'
         alias gs='git status'
+        alias gsh='git show'
         alias gd='git diff'
         alias gds='git diff --staged'
         alias gai='git add -i'
